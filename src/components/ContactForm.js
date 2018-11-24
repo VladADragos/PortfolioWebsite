@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -30,7 +31,7 @@ export class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form onSubmit={this.handleSubmit} data-netlify="true" name="contact">
+      <form onSubmit={this.handleSubmit}>
         <p>
           <label>
             Your Name:{" "}
