@@ -30,7 +30,7 @@ export class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} data-netlify="true" name="contact">
         <p>
           <label>
             Your Name:{" "}
