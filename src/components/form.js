@@ -34,7 +34,13 @@ export class Form extends Component {
     };
 
     return (
-      <form action="" className="contact-form" onSubmit={handleSubmit}>
+      <form
+        className="contact-form"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        name="contact"
+        onSubmit={handleSubmit}
+      >
         <div className="contact-form__input--row">
           <input
             className="contact-form__input"
@@ -57,7 +63,7 @@ export class Form extends Component {
           cols="18"
           rows="8"
         />
-        <button className="contact-form__button">
+        <button className="contact-form__button" name="submit">
           Submit <i className="fas fa-envelope" />
         </button>
       </form>
