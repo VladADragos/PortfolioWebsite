@@ -34,12 +34,7 @@ export class Form extends Component {
     };
 
     return (
-      <form
-        className="contact-form"
-        netlify
-        name="contact"
-        onSubmit={handleSubmit}
-      >
+      <form className="contact-form" name="contact" data-netlify="true">
         <div className="contact-form__input--row">
           <input
             className="contact-form__input"
