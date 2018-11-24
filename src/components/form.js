@@ -26,8 +26,7 @@ export class Form extends Component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
-    // Initialize Firebase
-
+    const { name, email, message } = this.state;
     return (
       <form
         className="contact-form"
@@ -40,12 +39,16 @@ export class Form extends Component {
             placeholder="Name"
             type="text"
             name="name"
+            value={name}
+            onChange={this.handleChange}
           />
           <input
             className="contact-form__input"
             placeholder="Email"
             type="email"
             name="email"
+            value={email}
+            onChange={this.handleChange}
           />
         </div>
         <textarea
@@ -55,6 +58,8 @@ export class Form extends Component {
           id=""
           cols="18"
           rows="8"
+          value={message}
+          onChange={this.handleChange}
         />
         <button className="contact-form__button" name="submit" type="submit">
           Submit <i className="fas fa-envelope" />
