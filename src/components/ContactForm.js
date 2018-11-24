@@ -36,6 +36,7 @@ export class ContactForm extends React.Component {
         data-netlify="true"
         name="contact"
         method="POST"
+        data-netlify-honeypot="bot-field"
       >
         <p>
           <label>
