@@ -23,7 +23,7 @@ export class ContactForm extends React.Component {
       .then(() => alert("Success!"))
       .catch(error => alert(error));
 
-    //e.preventDefault();
+    e.preventDefault();
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
