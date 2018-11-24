@@ -1,9 +1,9 @@
-import React, { Component } from "react";
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
+import React, { Component } from "react";
 export class Form extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +16,7 @@ export class Form extends Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact-form", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -61,6 +61,7 @@ export class Form extends Component {
           value={message}
           onChange={this.handleChange}
         />
+        <input type="hidden" name="form-name" value="contact-form" />
         <button className="contact-form__button" name="submit" type="submit">
           Submit <i className="fas fa-envelope" />
         </button>

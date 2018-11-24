@@ -9,9 +9,8 @@ export class Footer extends Component {
     return (
       <section className="footer" id="footer">
         <div className="footer__container">
-          {/*<Form /> */}
+          <Form />
           <Info />
-          <ContactForm />
         </div>
       </section>
     );
