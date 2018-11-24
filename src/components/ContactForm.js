@@ -32,11 +32,11 @@ export class ContactForm extends React.Component {
     const { name, email, message } = this.state;
     return (
       <form
-        onSubmit={this.handleSubmit}
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
         name="contact"
         method="POST"
-        data-netlify-honeypot="bot-field"
       >
         <p>
           <label>
