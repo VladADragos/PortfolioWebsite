@@ -33,6 +33,7 @@ export class Form extends Component {
         className="contact-form"
         onSubmit={this.handleSubmit}
         name="contact-form"
+        method="POST"
       >
         <div className="contact-form__input--row">
           <input
