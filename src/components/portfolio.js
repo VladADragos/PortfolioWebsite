@@ -5,11 +5,10 @@ export class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio">
-        
-        <div className="grid">
-          <PortfolioItem title="försvars-makten" enlargen="enlarge"/>
-          <PortfolioItem title="fortum" enlargen=""/>
-          <PortfolioItem title="saab" enlargen=""/>
+        <div className="portfolio__grid">
+          <PortfolioItem title="försvars-makten" enlargen="enlarge" />
+          <PortfolioItem title="fortum" enlargen="" />
+          <PortfolioItem title="saab" enlargen="" />
         </div>
       </div>
     );

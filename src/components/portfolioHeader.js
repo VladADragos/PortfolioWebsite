@@ -4,13 +4,10 @@ export class PortfolioHeader extends Component {
   render() {
     return (
       <div className="portfolio-header" id="porfolio">
-        <img src={whale} alt="" className="whale" />
-        
-        <div className="portfolio-header-title">
-        <h2>Portfolio</h2>
-        <p className="disclaimer">
-          *All projects make use of JavaScript, SASS and BEM naming methodology
-        </p>
+        <img src={whale} alt="" className="portfolio-header__image" />
+
+        <div className="portfolio-header__title-container">
+          <h2 className="portfolio-header__title">Portfolio</h2>
         </div>
       </div>
     );

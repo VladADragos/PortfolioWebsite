@@ -5,23 +5,23 @@
   align-self: flex-start;
   justify-content: space-between;
   position: relative;
-  header {
-  }
-  nav {
-    display: flex;
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      padding: 1.6rem 1.3rem;
-      &:hover {
-        background: rgba(81, 118, 146, 0.3);
-      }
-    }
+}
+.navbar__logo {
+  width: 60%;
+}
+.navbar__links-container {
+  display: flex;
+}
+.navbar__link {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 1.6rem 1.3rem;
+  &:hover {
+    background: rgba(81, 118, 146, 0.3);
   }
 }
-.mobile-menu,
-.mobile-menu-label {
+.navbar__label,
+.navbar__checkbox {
   display: none;
   margin-right: 1rem;
 }

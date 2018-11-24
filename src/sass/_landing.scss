@@ -1,4 +1,4 @@
-.main {
+.hero {
   margin-bottom: 0px;
   padding-bottom: 0px;
   height: $sectionHeight;
@@ -6,67 +6,55 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   position: relative;
-
   background: url("../images/stars.svg"),
     linear-gradient(-60deg, #292d49, #517692);
+}
+.hero__image {
+  z-index: 1;
+  width: $iceburgImageWidth;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.hero__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-  .iceburg-image {
-    z-index: 1;
-    width: $iceburgImageWidth;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-  }
-  .iceburg {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  height: 50%;
+  flex-direction: column;
+}
+.hero__text-container {
+  display: flex;
+  flex-direction: column;
 
-    height: 50%;
-    flex-direction: column;
-
-    &-text {
-      display: flex;
-      flex-direction: column;
-
-      z-index: 2;
-      text-align: center;
-      align-items: center;
-
-      h2 {
-        font-size: 3.5rem;
-        color: #132f5b;
-      }
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: #547a8e;
-        width: 80%;
-      }
-      a {
-        width: 60%;
-
-        padding: 0.5rem 1.3rem;
-        font-size: 2rem;
-
-        border-radius: 2rem;
-
-        i {
-          padding-top: 0.2rem;
-        }
-      }
-      .button-cta {
-        margin-top: 3rem;
-        opacity: 0.7;
-        background: #517692;
-        transition: all 0.5s ease-out;
-        &:hover {
-          background: #292d49;
-        }
-      }
-    }
+  z-index: 2;
+  text-align: center;
+  align-items: center;
+}
+.hero__header {
+  font-size: 3.5rem;
+  color: #132f5b;
+  line-height: 1;
+}
+.hero__sub-header {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #547a8e;
+  width: 80%;
+}
+.hero__cta {
+  margin-top: 3rem;
+  opacity: 0.7;
+  background: #517692;
+  transition: all 0.5s ease-out;
+  width: 60%;
+  padding: 0.5rem 1.3rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  &:hover {
+    background: #292d49;
   }
 }

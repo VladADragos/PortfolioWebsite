@@ -9,40 +9,49 @@ class Navbar extends Component {
       e.preventDefault();
 
       // (e.currentTarget.className, 1000);
-      let target = `.${e.currentTarget.className.slice(
-        4,
+      let target = `.${e.currentTarget.classList[1].slice(
+        14,
         e.currentTarget.className.length
       )}`;
       smoothScroll(target, 1200);
     };
     return (
       <div className="navbar">
-        <header>
+        <header className="navbar__header">
           <a href="./">
-            <img src={logo} alt="" width="60%" />
+            <img src={logo} alt="" className="navbar__logo" />
           </a>
         </header>
-        <label htmlFor="mobile-menu" className="mobile-menu-label">
+        <label htmlFor="navbar__checkbox" className="navbar__label">
           <i className="fas fa-bars" />
         </label>
         <input
           type="checkbox"
-          name="mobile-menu"
-          id="mobile-menu"
-          className="mobile-menu"
+          name="navbar__checkbox"
+          id="navbar__checkbox"
+          className="navbar__checkbox"
         />
-        <nav>
-          <a href="./">
-            <h2>HOME</h2>
+        <nav className="navbar__links-container">
+          <a href="./" className="navbar__link">
+            HOME
           </a>
-          <a className="nav-portfolio" onClick={handleScroll}>
-            <h2>PORTFOLIO</h2>
+          <a
+            className="navbar__link navbar__link--portfolio"
+            onClick={handleScroll}
+          >
+            PORTFOLIO
           </a>
-          <a className="nav-about" onClick={handleScroll}>
-            <h2>ABOUT</h2>
+          <a
+            className="navbar__link navbar__link--about"
+            onClick={handleScroll}
+          >
+            ABOUT
           </a>
-          <a className="nav-contact" onClick={handleScroll}>
-            <h2>CONTACT</h2>
+          <a
+            className="navbar__link navbar__link--contact"
+            onClick={handleScroll}
+          >
+            CONTACT
           </a>
         </nav>
       </div>

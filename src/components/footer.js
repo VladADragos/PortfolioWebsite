@@ -7,7 +7,7 @@ export class Footer extends Component {
   render() {
     return (
       <section className="footer" id="footer">
-        <div className="footer-container">
+        <div className="footer__container">
           <Form />
           <Info />
         </div>

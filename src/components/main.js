@@ -4,14 +4,16 @@ import top from "../images/top.svg";
 export class Main extends Component {
   render() {
     return (
-      <section className="main">
+      <section className="hero">
         <Navbar />
-        <img src={top} alt="" className="iceburg-image" />
-        <div className="iceburg">
-          <div className="iceburg-text">
-            <h2>VLAD DRAGOS</h2>
-            <h3>Aspiring web developer Looking for part time job</h3>
-            <a href="./" className="button button-cta">
+        <img src={top} alt="" className="hero__image" />
+        <div className="hero__container">
+          <div className="hero__text-container">
+            <h2 className="hero__header">VLAD DRAGOS</h2>
+            <h3 className="hero__sub-header">
+              Aspiring web developer Looking for part time job
+            </h3>
+            <a href="./" className="button hero__cta">
               View Portfolio
             </a>
           </div>

@@ -20,7 +20,7 @@ export class Form extends Component {
       let name = e.target.name.value;
       let email = e.target.email.value;
       let message = e.target.message.value;
-      console.log(name,email,message);
+      console.log(name, email, message);
       saveMessage(name, email, message);
     };
 
@@ -34,24 +34,33 @@ export class Form extends Component {
     };
 
     return (
-      <div className="contact">
-        <form action="" className="form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <input placeholder="Name" type="text" name="name" />
-            <input placeholder="Email" type="email" name="email" />
-          </div>
-          <textarea
-            placeholder="Message"
-            name="message"
-            id=""
-            cols="18"
-            rows="8"
+      <form action="" className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-form__input--row">
+          <input
+            className="contact-form__input"
+            placeholder="Name"
+            type="text"
+            name="name"
           />
-          <button className="button">
-            Submit <i className="fas fa-envelope" />
-          </button>
-        </form>
-      </div>
+          <input
+            className="contact-form__input"
+            placeholder="Email"
+            type="email"
+            name="email"
+          />
+        </div>
+        <textarea
+          className="contact-form__input"
+          placeholder="Message"
+          name="message"
+          id=""
+          cols="18"
+          rows="8"
+        />
+        <button className="contact-form__button">
+          Submit <i className="fas fa-envelope" />
+        </button>
+      </form>
     );
   }
 }
