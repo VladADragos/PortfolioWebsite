@@ -31,7 +31,6 @@ export class Form extends Component {
     return (
       <form
         className="contact-form"
-        data-netlify="true"
         onSubmit={this.handleSubmit}
         name="contact-form"
       >
