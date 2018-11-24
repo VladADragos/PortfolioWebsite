@@ -5,7 +5,7 @@ const encode = data => {
     .join("&");
 };
 
-class ContactForm extends React.Component {
+export class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: "", email: "", message: "" };
