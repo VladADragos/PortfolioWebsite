@@ -57,7 +57,7 @@ export class Form extends Component {
           cols="18"
           rows="8"
         />
-        <button className="contact-form__button" name="submit">
+        <button className="contact-form__button" name="submit" type="submit">
           Submit <i className="fas fa-envelope" />
         </button>
       </form>
