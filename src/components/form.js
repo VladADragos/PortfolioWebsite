@@ -34,7 +34,12 @@ export class Form extends Component {
     };
 
     return (
-      <form className="contact-form" name="contact" data-netlify="true">
+      <form
+        className="contact-form"
+        name="contact"
+        data-netlify="true"
+        method="POST"
+      >
         <div className="contact-form__input--row">
           <input
             className="contact-form__input"
