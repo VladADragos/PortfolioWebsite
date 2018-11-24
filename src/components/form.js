@@ -36,8 +36,7 @@ export class Form extends Component {
     return (
       <form
         className="contact-form"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        netlify
         name="contact"
         onSubmit={handleSubmit}
       >
