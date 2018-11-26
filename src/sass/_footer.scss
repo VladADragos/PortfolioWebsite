@@ -22,7 +22,7 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  min-width: 30%;
   background: #566b8c;
   height: 100%;
   padding: 1.5rem;
@@ -48,7 +48,7 @@
 
 // footer contact form
 .contact-form {
-  min-height: 100%;
+  height: 100%;
   padding: 0% 1%;
   background: #566b8c;
   display: flex;
@@ -58,7 +58,7 @@
   width: 30%;
 }
 .contact-form__input--row {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   .contact-form__input {
@@ -66,7 +66,7 @@
   }
 }
 .contact-form__button {
-  width: 50%;
+  max-width: 50%;
   background: #1a234f;
   border: none;
   font-size: 1.5rem;

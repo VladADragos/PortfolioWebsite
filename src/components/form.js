@@ -11,8 +11,6 @@ export class Form extends Component {
     this.state = { name: "", email: "", message: "" };
   }
 
-  /* Here’s the juicy bit for posting the form submission */
-
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -23,6 +21,7 @@ export class Form extends Component {
       .catch(error => alert(error));
 
     e.preventDefault();
+    this.setState({ name: "", email: "", message: "" });
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -57,7 +56,6 @@ export class Form extends Component {
           className="contact-form__input"
           placeholder="Message"
           name="message"
-          id=""
           cols="18"
           rows="8"
           value={message}
