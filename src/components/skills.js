@@ -25,7 +25,7 @@ export class Skills extends Component {
             <div className="skills-section">
               <Skill icon="fab fa-react" text="React" color="#61dafb" />
               <Skill icon="fab fa-php" text="PHP" color="#52628F" />
-              <Skill icon="fab fa-sass" text="SASS" color="#CF649A" />
+              <Skill icon="fab fa-sass" text="SASS" color="#CF64A" />
             </div>
           </div>
 
