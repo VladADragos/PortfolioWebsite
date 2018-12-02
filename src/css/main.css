@@ -23,7 +23,7 @@
 @media screen and (max-width: 450px) {
   @keyframes enlargeAnimation {
     0% {
-      transform: translateY(-30%); }
+      transform: translateY(-20%); }
     100% {
       transform: translateY(0%); } }
   @keyframes enlargeImage {
@@ -667,12 +667,7 @@ button:hover {
           background: #1f4270; }
         .portfolio .portfolio__grid .portfolio-item a .portfolio-item__image {
           height: 30%;
-          border: none; }
-        .portfolio .portfolio__grid .portfolio-item .portfolio-item__tags-container {
-          display: none;
-          opacity: 1;
-          transform: none;
-          position: static; } }
+          border: none; } }
 @media screen and (max-width: 450px) {
   html {
     font-size: 12px; }
@@ -745,40 +740,31 @@ button:hover {
         right: 50%;
         top: -25%; }
 
-  .enlarge {
-    grid-row: 1/1;
-    grid-column: 1/1;
-    height: 50vh; }
-    .enlarge .portfolio-item__image {
-      width: 100%; }
-    .enlarge .portfolio-item__info-container {
-      position: unset;
-      bottom: 0;
-      right: 0;
-      position: static;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      z-index: 1; }
-      .enlarge .portfolio-item__info-container .portfolio-item___text-container {
-        display: block;
-        position: static;
-        width: 100%;
-        margin: auto; }
-        .enlarge .portfolio-item__info-container .portfolio-item___text-container p {
-          width: 100%; }
-      .enlarge .portfolio-item__info-container__tags {
-        position: static;
-        width: 100%; }
-        .enlarge .portfolio-item__info-container__tags .main-buttons {
-          position: static; }
-
   .portfolio {
     margin-top: 0vh; }
+    .portfolio .portfolio-item__tags-container {
+      opacity: 1;
+      width: 100%; }
+      .portfolio .portfolio-item__tags-container .portfolio-item__tag {
+        font-size: 1.4rem; }
+    .portfolio .portfolio-item___text-container {
+      text-align: center; }
+    .portfolio .portfolio-item__paragraph {
+      font-size: 1.3rem; }
+    .portfolio .portfolio-item__title {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .portfolio .portfolio-item__buttons-container {
+      display: none;
+      width: 80%;
+      align-self: center;
+      position: static; }
     .portfolio .portfolio-item__info-container {
       width: 90%;
       margin: auto;
-      position: static; }
+      position: static;
+      z-index: -100; }
     .portfolio .view-button {
       display: none; }
     .portfolio .portfolio__grid {
@@ -798,12 +784,8 @@ button:hover {
           height: 100%;
           border: none;
           box-shadow: none;
-          border: #435166 8px solid !important; }
-        .portfolio .portfolio__grid .portfolio-item .portfolio-item__tags-container {
-          display: none;
-          opacity: 1;
-          transform: none;
-          position: static; }
+          border: #435166 8px solid !important;
+          z-index: 100; }
 
   .about .about__image {
     width: 300vw;
@@ -922,6 +904,36 @@ button:hover {
         .footer .footer__container .contact-info .contact-info__text,
         .footer .footer__container .contact-info .contact-info__icon {
           font-size: 1.4rem; } }
+.enlarge {
+  grid-row: 1/1;
+  grid-column: 1/1;
+  height: 50vh; }
+  .enlarge .portfolio-item__buttons-container {
+    display: block; }
+  .enlarge .portfolio-item__image {
+    width: 100%; }
+  .enlarge .portfolio-item__info-container {
+    position: unset;
+    bottom: 0;
+    right: 0;
+    position: static;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1; }
+    .enlarge .portfolio-item__info-container .portfolio-item___text-container {
+      display: block;
+      position: static;
+      width: 100%;
+      margin: auto; }
+      .enlarge .portfolio-item__info-container .portfolio-item___text-container p {
+        width: 100%; }
+    .enlarge .portfolio-item__info-container__tags {
+      position: static;
+      width: 100%; }
+      .enlarge .portfolio-item__info-container__tags .main-buttons {
+        position: static; }
+
 /* sass --watch sass/main.scss:css/main.css */
 
 /*# sourceMappingURL=main.css.map */

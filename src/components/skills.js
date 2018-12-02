@@ -32,7 +32,7 @@ export class Skills extends Component {
           <div className="skills-item skills-item--learning">
             <h3 className="skills-item__title">Learning</h3>
             <div className="skills-section">
-              <Skill icon="fas fa-database" text="Python" color="#f49542" />
+              <Skill icon="fas fa-database" text="MySql" color="#f49542" />
               <Skill icon="fab fa-node-js" text="Node.js" color="#8BBF3D" />
               <Skill icon="fab fa-python" text="Python" color="#FFE76F" />
             </div>
