@@ -123,89 +123,105 @@ button:hover {
   z-index: 0;
   position: relative; }
 
+.about__image {
+  z-index: 0;
+  width: 65vw;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%); }
+
 .about {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: center; }
-  .about .about__image {
-    z-index: 0;
-    width: 65vw;
+
+.about-text {
+  z-index: 1;
+  width: 50%;
+  margin: 2.5vw 0 0 2vw;
+  display: flex;
+  justify-content: space-between; }
+
+.about-text__title {
+  font-size: 2.8rem;
+  color: #032530;
+  padding: 0px;
+  margin: 0px; }
+
+.about-text__paragraph {
+  font-size: 1.2rem; }
+
+.skills {
+  margin-top: 2.5vw;
+  z-index: 0;
+  width: 40%;
+  text-align: center; }
+
+.skills__title {
+  font-size: 2.5rem; }
+
+.about-text__container {
+  width: 48%;
+  border-left: #032530a8 2rem solid;
+  padding: 0rem 1rem 1rem 1rem;
+  position: relative; }
+  .about-text__container::after {
+    z-index: -1;
+    content: "";
+    animation: AnimateAfterOut 0.3s forwards ease-in;
+    width: 0%;
+    height: 100%;
     position: absolute;
+    background: #17455383;
     top: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%); }
-  .about .skills {
-    margin-top: 2.5vw;
-    z-index: 0;
-    width: 40%;
-    text-align: center; }
-    .about .skills .skills__title {
-      font-size: 2.5rem; }
-    .about .skills .skills-grid {
-      display: flex;
-      justify-content: space-evenly;
-      border-top: #052a35 1rem solid; }
-      .about .skills .skills-grid .skills-item .skills-item__title {
-        font-size: 1.3rem; }
-      .about .skills .skills-grid .skills-item .skills-section {
-        display: flex; }
-        .about .skills .skills-grid .skills-item .skills-section .skill {
-          opacity: 0.8;
-          margin: 0.7rem;
-          color: #052a35 !important; }
-          .about .skills .skills-grid .skills-item .skills-section .skill .skill__icon {
-            font-size: 2.5rem; }
-          .about .skills .skills-grid .skills-item .skills-section .skill .skill__text {
-            font-size: 1rem;
-            font-weight: 400; }
-      .about .skills .skills-grid .skills-item--mastered {
-        border-bottom: #4e8a63af 0.4rem solid;
-        background: #7cbc92;
-        border-right: #4e8a63af 0.75rem solid;
-        border-bottom-left-radius: 2rem; }
-      .about .skills .skills-grid .skills-item--good {
-        border-bottom: #82883bb6 0.4rem solid;
-        border-right: #82883bb6 0.75rem solid;
-        background: #b7bc7c;
-        border-bottom-left-radius: 2rem; }
-      .about .skills .skills-grid .skills-item--learning {
-        border-bottom: #9e7b41a4 0.4rem solid;
-        background: #bc9f71;
-        border-right: #9e7b41a4 0.75rem solid;
-        border-bottom-left-radius: 2rem; }
-  .about .about-text {
-    z-index: 1;
-    width: 50%;
-    margin: 2.5vw 0 0 2vw;
-    display: flex;
-    justify-content: space-between; }
-    .about .about-text .about-text__container {
-      width: 48%;
-      border-left: #032530a8 2rem solid;
-      padding: 0rem 1rem 1rem 1rem;
-      position: relative; }
-      .about .about-text .about-text__container::after {
-        z-index: -1;
-        content: "";
-        animation: AnimateAfterOut 0.3s forwards ease-in;
-        width: 0%;
-        height: 100%;
-        position: absolute;
-        background: #17455383;
-        top: 0%;
-        left: 0%; }
-      .about .about-text .about-text__container:hover::after {
-        padding: 1rem;
-        animation: AnimateAfter 0.3s forwards ease-in;
-        transform-origin: left; }
-      .about .about-text .about-text__container .about-text__title {
-        font-size: 2.8rem;
-        color: #032530;
-        padding: 0px;
-        margin: 0px; }
-      .about .about-text .about-text__container .about-text__paragraph {
-        font-size: 1.2rem; }
+    left: 0%; }
+  .about-text__container:hover::after {
+    padding: 1rem;
+    animation: AnimateAfter 0.3s forwards ease-in;
+    transform-origin: left; }
+
+.skills-grid {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: #052a35 1rem solid; }
+
+.skills-item--mastered {
+  border-bottom: #4e8a63af 0.4rem solid;
+  background: #7cbc92;
+  border-right: #4e8a63af 0.75rem solid;
+  border-bottom-left-radius: 2rem; }
+
+.skills-item--good {
+  border-bottom: #82883bb6 0.4rem solid;
+  border-right: #82883bb6 0.75rem solid;
+  background: #b7bc7c;
+  border-bottom-left-radius: 2rem; }
+
+.skills-item--learning {
+  border-bottom: #9e7b41a4 0.4rem solid;
+  background: #bc9f71;
+  border-right: #9e7b41a4 0.75rem solid;
+  border-bottom-left-radius: 2rem; }
+
+.skill {
+  opacity: 0.8;
+  margin: 0.7rem;
+  color: #052a35 !important; }
+
+.skill__icon {
+  font-size: 2.5rem; }
+
+.skill__text {
+  font-size: 1rem;
+  font-weight: 400; }
+
+.skills-section {
+  display: flex; }
+
+.skills-item__title {
+  font-size: 1.3rem; }
 
 .portfolio-header {
   z-index: 0;
@@ -220,7 +236,7 @@ button:hover {
   z-index: 0;
   background: none; }
 
-.portfolio-header__title-container {
+.portfolio-header__title {
   z-index: 100;
   position: absolute;
   top: 50%;
@@ -228,9 +244,8 @@ button:hover {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .portfolio-header__title-container .portfolio-header__title {
-    font-size: 2.8rem; }
+  align-items: center;
+  font-size: 2.8rem; }
 
 .portfolio {
   margin-bottom: 5vh;
@@ -357,17 +372,20 @@ button:hover {
   right: 0%;
   text-align: left;
   display: none; }
-  .portfolio-item___text-container .portfolio-item__title,
-  .portfolio-item___text-container .portfolio-item__paragraph {
-    color: #292D49; }
-  .portfolio-item___text-container .portfolio-item__title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: none;
-    padding: none; }
-  .portfolio-item___text-container .portfolio-item__paragraph {
-    font-size: 1.2rem;
-    margin-bottom: 0.6rem; }
+
+.portfolio-item__paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem; }
+
+.portfolio-item__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: none;
+  padding: none; }
+
+.portfolio-item__title,
+.portfolio-item__paragraph {
+  color: #292D49; }
 
 @keyframes enlargeAnimation {
   0% {
@@ -493,17 +511,19 @@ button:hover {
   .hero__image {
     width: 85vw; }
 
-  .about-image {
+  .about__image {
     width: 85vw; }
-  .about-text--container {
+
+  .about-text {
     width: 70%; }
-  .about-skills {
+
+  .skills {
     width: 55%; } }
 @media screen and (max-width: 1200px) {
   .hero__image {
     width: 100vw; }
 
-  .about-image {
+  .about__image {
     width: 100vw; } }
 @media screen and (max-width: 1000px) {
   .navbar {
@@ -547,7 +567,7 @@ button:hover {
   .hero__image {
     width: 100vw; }
 
-  .about-image {
+  .about__image {
     width: 100vw; } }
 @media screen and (max-width: 720px) {
   html {
@@ -589,7 +609,7 @@ button:hover {
     margin-top: 2vw;
     display: flex;
     z-index: 0;
-    max-width: 100%;
+    min-width: 100%;
     justify-content: space-around;
     position: relative; }
     .portfolio-header .portfolio-header__image {
@@ -626,7 +646,6 @@ button:hover {
       .portfolio .portfolio__grid .portfolio-item {
         margin: 1rem 0rem;
         max-width: 100%;
-        border: 3px solid red;
         height: 50vh; }
         .portfolio .portfolio__grid .portfolio-item a h3 {
           display: inline;
@@ -680,16 +699,19 @@ button:hover {
           font-weight: 700; }
 
   .portfolio-header {
+    top: 0;
+    left: 0;
     margin-top: 2vw;
-    display: flex;
+    transform: none;
     z-index: 0;
-    max-width: 100%;
-    justify-content: space-around;
+    min-width: 100%;
     position: relative; }
     .portfolio-header .portfolio-header__image {
       display: none; }
-    .portfolio-header .portfolio-header__title-container {
-      position: static;
+    .portfolio-header .portfolio-header__title {
+      position: unset;
+      top: none;
+      left: none;
       transform: none;
       background: #435166;
       width: 100%;
@@ -697,7 +719,7 @@ button:hover {
       margin: auto;
       z-index: 100;
       padding: 0.5rem 0rem; }
-      .portfolio-header .portfolio-header__title-container::after, .portfolio-header .portfolio-header__title-container::before {
+      .portfolio-header .portfolio-header__title::after, .portfolio-header .portfolio-header__title::before {
         content: "";
         position: absolute;
         top: 0%;
@@ -705,58 +727,58 @@ button:hover {
         width: 25%;
         height: 150%;
         z-index: -100; }
-      .portfolio-header .portfolio-header__title-container::after {
+      .portfolio-header .portfolio-header__title::after {
         top: -25%;
         left: 50%; }
-      .portfolio-header .portfolio-header__title-container::before {
+      .portfolio-header .portfolio-header__title::before {
         right: 50%;
         top: -25%; }
 
   .enlarge {
     grid-row: 1/1;
-    grid-column: 1/1; }
-    .enlarge img {
-      height: 40% !important; }
-    .enlarge .item--info {
-      position: static !important;
-      width: 100% !important;
+    grid-column: 1/1;
+    height: 50vh; }
+    .enlarge .portfolio-item__image {
+      width: 100%; }
+    .enlarge .portfolio-item__info-container {
+      position: unset;
+      bottom: 0;
+      right: 0;
+      position: static;
+      width: 100%;
       display: flex;
       flex-direction: column;
       z-index: 1; }
-      .enlarge .item--info__text {
-        display: block !important;
-        position: static !important;
-        width: 100% !important;
+      .enlarge .portfolio-item__info-container .portfolio-item___text-container {
+        display: block;
+        position: static;
+        width: 100%;
         margin: auto; }
-        .enlarge .item--info__text p {
-          width: 100% !important; }
-      .enlarge .item--info__tags {
-        display: block !important;
-        position: static !important;
-        width: 100% !important; }
-        .enlarge .item--info__tags .main-buttons {
-          display: block !important;
-          position: static !important; }
+        .enlarge .portfolio-item__info-container .portfolio-item___text-container p {
+          width: 100%; }
+      .enlarge .portfolio-item__info-container__tags {
+        position: static;
+        width: 100%; }
+        .enlarge .portfolio-item__info-container__tags .main-buttons {
+          position: static; }
 
   .portfolio {
     margin-top: 0vh; }
+    .portfolio .portfolio-item__info-container {
+      width: 90%;
+      margin: auto; }
     .portfolio .portfolio__grid {
-      grid-template-columns: 1fr;
-      width: 90%; }
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
       .portfolio .portfolio__grid .portfolio-item {
         margin: 1rem 0rem;
         max-width: 100%;
-        border: 3px solid red;
-        height: 50vh; }
-        .portfolio .portfolio__grid .portfolio-item a h3 {
-          display: inline;
-          opacity: 1;
-          transform: none;
-          position: static !important;
-          font-size: 2.2rem;
-          background: #1f4270; }
-        .portfolio .portfolio__grid .portfolio-item a .portfolio-item__image {
-          height: 30%;
+        position: unset;
+        height: unset; }
+        .portfolio .portfolio__grid .portfolio-item .portfolio-item__image {
+          height: 25vh;
+          height: 100%;
           border: none; }
         .portfolio .portfolio__grid .portfolio-item .portfolio-item__tags-container {
           display: none;
@@ -764,81 +786,81 @@ button:hover {
           transform: none;
           position: static; }
 
-  .about-image {
+  .about .about__image {
     width: 300vw;
     display: none; }
-  .about-skills {
+  .about .skills {
     margin-bottom: 3rem;
     width: 100%;
     align-items: center;
     align-content: center; }
-    .about-skills-text-text {
-      border: none; }
-      .about-skills-text-text h2 {
-        text-align: center; }
-    .about-skills-text h2 {
+    .about .skills .skills__title {
+      text-align: center; }
+    .about .skills .skills__title {
       background: #1f4270;
       font-weight: 700; }
-    .about-skills-text .skills-grid {
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-      margin: auto;
-      border: none; }
-      .about-skills-text .skills-grid .item {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: none;
-        border-radius: 0rem; }
-        .about-skills-text .skills-grid .item .skills-tags {
-          width: 100%;
-          justify-content: space-evenly; }
-          .about-skills-text .skills-grid .item .skills-tags .tag i {
-            font-size: 3rem; }
-          .about-skills-text .skills-grid .item .skills-tags .tag h4 {
-            font-size: 1.3rem;
-            font-weight: 400; }
-      .about-skills-text .skills-grid .mastered {
-        background: #7cc164; }
-      .about-skills-text .skills-grid .good {
-        background: #b7bc7c; }
-      .about-skills-text .skills-grid .learning {
-        background: #bc9f71; }
-  .about-text--container {
+  .about .about-text {
     margin: 0px;
     padding: 0px;
     width: 100%;
     flex-direction: column;
     align-items: center;
     margin: 3rem 0rem; }
-    .about-text--container-text {
+    .about .about-text .about-text__container {
       width: 90%;
       background: #395e7c;
       border-top-right-radius: 2rem;
       border-top-left-radius: 2rem;
       border: none;
       box-shadow: 5px 10px 100px #476aa3; }
-      .about-text--container-text > h2 {
+      .about .about-text .about-text__container .about-text__title {
         color: #ebebebf8; }
-      .about-text--container-text:nth-last-child(1) {
+      .about .about-text .about-text__container:nth-last-child(1) {
         background: #9bd8ff;
         border-radius: 0rem 0rem 2rem 2rem; }
-        .about-text--container-text:nth-last-child(1) h2,
-        .about-text--container-text:nth-last-child(1) p {
+        .about .about-text .about-text__container:nth-last-child(1) h2,
+        .about .about-text .about-text__container:nth-last-child(1) p {
           color: #414e60; }
-      .about-text--container-text h2,
-      .about-text--container-text p {
+      .about .about-text .about-text__container h2,
+      .about .about-text .about-text__container p {
         margin: 0px;
         width: 95%;
         margin: auto; }
-      .about-text--container-text h2 {
+      .about .about-text .about-text__container h2 {
         padding-top: 1rem;
         font-size: 2.3; }
-      .about-text--container-text p {
+      .about .about-text .about-text__container p {
         padding-bottom: 0.7rem;
         font-size: 1.5rem; }
+
+  .skills-grid {
+    border: none;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    border: none; }
+    .skills-grid .skills-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      border-radius: 0rem; }
+      .skills-grid .skills-item .skills-section {
+        width: 100%;
+        justify-content: space-evenly; }
+        .skills-grid .skills-item .skills-section .skill .skill__icon {
+          font-size: 3rem; }
+        .skills-grid .skills-item .skills-section .skill .skill__text {
+          font-size: 1.3rem;
+          font-weight: 400; }
+    .skills-grid .skills-item--mastered {
+      background: #7cc164; }
+    .skills-grid .skills-item--good {
+      background: #b7bc7c; }
+    .skills-grid .skills-item--learning {
+      background: #bc9f71; }
 
   .mobile-menu-label {
     font-size: 4rem; }

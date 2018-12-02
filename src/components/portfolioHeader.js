@@ -6,9 +6,7 @@ export class PortfolioHeader extends Component {
       <div className="portfolio-header" id="porfolio">
         <img src={whale} alt="" className="portfolio-header__image" />
 
-        <div className="portfolio-header__title-container">
-          <h2 className="portfolio-header__title">Portfolioo</h2>
-        </div>
+        <h2 className="portfolio-header__title">Portfolio</h2>
       </div>
     );
   }

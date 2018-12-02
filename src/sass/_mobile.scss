@@ -8,19 +8,18 @@
     width: 85vw;
   }
 
-  .about {
-    &-image {
-      width: 85vw;
-    }
-
-    &-text--container {
-      width: 70%;
-    }
-
-    &-skills {
-      width: 55%;
-    }
+  .about__image {
+    width: 85vw;
   }
+
+  .about-text {
+    width: 70%;
+  }
+
+  .skills {
+    width: 55%;
+  }
+
   // <end of HERO SECTION/>
 }
 
@@ -30,10 +29,8 @@
     width: 100vw;
   }
 
-  .about {
-    &-image {
-      width: 100vw;
-    }
+  .about__image {
+    width: 100vw;
   }
 }
 // <end of HERO SECTION/>
@@ -93,10 +90,8 @@
     width: 100vw;
   }
 
-  .about {
-    &-image {
-      width: 100vw;
-    }
+  .about__image {
+    width: 100vw;
   }
 }
 // <endt of HERO SECTION/>
@@ -156,7 +151,7 @@
     margin-top: 2vw;
     display: flex;
     z-index: 0;
-    max-width: 100%;
+    min-width: 100%;
     justify-content: space-around;
     position: relative;
 
@@ -210,7 +205,6 @@
         margin: 1rem 0rem;
         max-width: 100%;
 
-        border: 3px solid red;
         height: 50vh;
 
         a {
@@ -298,20 +292,25 @@
   }
 
   .portfolio-header {
+    top: 0;
+    left: 0;
+
     margin-top: 2vw;
-    display: flex;
+    transform: none;
+
     z-index: 0;
-    max-width: 100%;
-    justify-content: space-around;
+    min-width: 100%;
+
     position: relative;
 
     .portfolio-header__image {
       display: none;
     }
 
-    .portfolio-header__title-container {
-      position: static;
-
+    .portfolio-header__title {
+      position: unset;
+      top: none;
+      left: none;
       transform: none;
       background: #435166;
       width: 100%;
@@ -333,7 +332,6 @@
 
       &::after {
         top: -25%;
-
         left: 50%;
       }
 
@@ -348,36 +346,37 @@
     grid-row: 1/1;
     grid-column: 1/1;
 
-    img {
-      height: 40% !important;
+    height: 50vh;
+    .portfolio-item__image {
+      width: 100%;
     }
-
-    .item--info {
-      position: static !important;
-      width: 100% !important;
+    .portfolio-item__info-container {
+      position: unset;
+      bottom: 0;
+      right: 0;
+      position: static;
+      width: 100%;
       display: flex;
       flex-direction: column;
       z-index: 1;
 
-      &__text {
-        display: block !important;
-        position: static !important;
-        width: 100% !important;
+      .portfolio-item___text-container {
+        display: block;
+        position: static;
+        width: 100%;
         margin: auto;
 
         p {
-          width: 100% !important;
+          width: 100%;
         }
       }
 
       &__tags {
-        display: block !important;
-        position: static !important;
-        width: 100% !important;
+        position: static;
+        width: 100%;
 
         .main-buttons {
-          display: block !important;
-          position: static !important;
+          position: static;
         }
       }
     }
@@ -385,34 +384,27 @@
 
   .portfolio {
     margin-top: 0vh;
+    .portfolio-item__info-container {
+      width: 90%;
+      margin: auto;
+    }
 
     .portfolio__grid {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
 
-      width: 90%;
+      width: 100%;
 
       .portfolio-item {
         margin: 1rem 0rem;
         max-width: 100%;
+        position: unset;
+        height: unset;
 
-        border: 3px solid red;
-        height: 50vh;
-
-        a {
-          h3 {
-            display: inline;
-            opacity: 1;
-            transform: none;
-            position: static !important;
-            font-size: 2.2rem;
-            background: #1f4270;
-          }
-
-          .portfolio-item__image {
-            height: 30%;
-
-            border: none;
-          }
+        .portfolio-item__image {
+          height: 25vh;
+          height: 100%;
+          border: none;
         }
 
         .portfolio-item__tags-container {
@@ -426,80 +418,29 @@
   }
 
   .about {
-    .about-image {
+    .about__image {
       width: 300vw;
       display: none;
     }
 
-    &-skills {
+    .skills {
       margin-bottom: 3rem;
 
       width: 100%;
       align-items: center;
       align-content: center;
 
-      &-text {
-        &-text {
-          border: none;
+      .skills__title {
+        text-align: center;
+      }
 
-          h2 {
-            text-align: center;
-          }
-        }
-
-        h2 {
-          background: #1f4270;
-          font-weight: 700;
-        }
-
-        .skills-grid {
-          flex-direction: column;
-          align-items: center;
-          width: 80%;
-          margin: auto;
-          border: none;
-
-          .item {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: none;
-            border-radius: 0rem;
-
-            .skills-tags {
-              width: 100%;
-              justify-content: space-evenly;
-
-              .tag {
-                i {
-                  font-size: 3rem;
-                }
-
-                h4 {
-                  font-size: 1.3rem;
-                  font-weight: 400;
-                }
-              }
-            }
-          }
-
-          .mastered {
-            background: #7cc164;
-          }
-
-          .good {
-            background: #b7bc7c;
-          }
-
-          .learning {
-            background: #bc9f71;
-          }
-        }
+      .skills__title {
+        background: #1f4270;
+        font-weight: 700;
       }
     }
 
-    &-text--container {
+    .about-text {
       margin: 0px;
       padding: 0px;
       width: 100%;
@@ -507,14 +448,14 @@
       align-items: center;
       margin: 3rem 0rem;
 
-      &-text {
+      .about-text__container {
         width: 90%;
         background: #395e7c;
         border-top-right-radius: 2rem;
         border-top-left-radius: 2rem;
         border: none;
 
-        & > h2 {
+        .about-text__title {
           color: $white;
         }
 
@@ -549,6 +490,51 @@
           font-size: 1.5rem;
         }
       }
+    }
+  }
+  .skills-grid {
+    border: none;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    border: none;
+
+    .skills-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      border-radius: 0rem;
+
+      .skills-section {
+        width: 100%;
+        justify-content: space-evenly;
+
+        .skill {
+          .skill__icon {
+            font-size: 3rem;
+          }
+
+          .skill__text {
+            font-size: 1.3rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .skills-item--mastered {
+      background: #7cc164;
+    }
+
+    .skills-item--good {
+      background: #b7bc7c;
+    }
+
+    .skills-item--learning {
+      background: #bc9f71;
     }
   }
 
