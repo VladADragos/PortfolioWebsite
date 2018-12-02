@@ -668,7 +668,7 @@ button:hover {
         .portfolio .portfolio__grid .portfolio-item a .portfolio-item__image {
           height: 30%;
           border: none; } }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) {
   html {
     font-size: 12px; }
 
@@ -903,37 +903,37 @@ button:hover {
         margin-top: 3rem; }
         .footer .footer__container .contact-info .contact-info__text,
         .footer .footer__container .contact-info .contact-info__icon {
-          font-size: 1.4rem; } }
-.enlarge {
-  grid-row: 1/1;
-  grid-column: 1/1;
-  height: 50vh; }
-  .enlarge .portfolio-item__buttons-container {
-    display: block; }
-  .enlarge .portfolio-item__image {
-    width: 100%; }
-  .enlarge .portfolio-item__info-container {
-    position: unset;
-    bottom: 0;
-    right: 0;
-    position: static;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    z-index: 1; }
-    .enlarge .portfolio-item__info-container .portfolio-item___text-container {
-      display: block;
-      position: static;
-      width: 100%;
-      margin: auto; }
-      .enlarge .portfolio-item__info-container .portfolio-item___text-container p {
-        width: 100%; }
-    .enlarge .portfolio-item__info-container__tags {
-      position: static;
-      width: 100%; }
-      .enlarge .portfolio-item__info-container__tags .main-buttons {
-        position: static; }
+          font-size: 1.4rem; }
 
+  .enlarge {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    height: 50vh; }
+    .enlarge .portfolio-item__buttons-container {
+      display: block; }
+    .enlarge .portfolio-item__image {
+      width: 100%; }
+    .enlarge .portfolio-item__info-container {
+      position: unset;
+      bottom: 0;
+      right: 0;
+      position: static;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      z-index: 1; }
+      .enlarge .portfolio-item__info-container .portfolio-item___text-container {
+        display: block;
+        position: static;
+        width: 100%;
+        margin: auto; }
+        .enlarge .portfolio-item__info-container .portfolio-item___text-container p {
+          width: 100%; }
+      .enlarge .portfolio-item__info-container__tags {
+        position: static;
+        width: 100%; }
+        .enlarge .portfolio-item__info-container__tags .main-buttons {
+          position: static; } }
 /* sass --watch sass/main.scss:css/main.css */
 
 /*# sourceMappingURL=main.css.map */
