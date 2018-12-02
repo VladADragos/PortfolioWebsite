@@ -387,24 +387,34 @@
     .portfolio-item__info-container {
       width: 90%;
       margin: auto;
+      position: static;
     }
-
+    .view-button {
+      display: none;
+    }
     .portfolio__grid {
+      margin-top: 2vh;
       display: flex;
       flex-direction: column;
 
-      width: 100%;
+      max-width: 90%;
 
       .portfolio-item {
         margin: 1rem 0rem;
         max-width: 100%;
         position: unset;
         height: unset;
+        &::after,
+        &::before {
+          content: none;
+        }
 
         .portfolio-item__image {
           height: 25vh;
           height: 100%;
           border: none;
+          box-shadow: none;
+          border: #435166 8px solid !important;
         }
 
         .portfolio-item__tags-container {

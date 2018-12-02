@@ -10,6 +10,27 @@
   100% {
     transform: rotate(xx);
     width: 0%; } }
+@keyframes enlargeAnimation {
+  0% {
+    transform: translateX(8%); }
+  100% {
+    transform: translateX(0%); } }
+@keyframes enlargeImage {
+  0% {
+    transform: translateX(-8%); }
+  100% {
+    transform: translateX(0%); } }
+@media screen and (max-width: 450px) {
+  @keyframes enlargeAnimation {
+    0% {
+      transform: translateY(-30%); }
+    100% {
+      transform: translateY(0%); } }
+  @keyframes enlargeImage {
+    0% {
+      transform: translateX(0%); }
+    100% {
+      transform: translateX(0%); } } }
 body {
   font-size: 62.5%;
   font-family: 'Open Sans', sans-serif;
@@ -387,16 +408,6 @@ button:hover {
 .portfolio-item__paragraph {
   color: #292D49; }
 
-@keyframes enlargeAnimation {
-  0% {
-    transform: translateX(8%); }
-  100% {
-    transform: translateX(0%); } }
-@keyframes enlargeImage {
-  0% {
-    transform: translateX(-8%); }
-  100% {
-    transform: translateX(0%); } }
 .enlarge {
   grid-row: 1/3;
   grid-column: 1/3;
@@ -766,20 +777,28 @@ button:hover {
     margin-top: 0vh; }
     .portfolio .portfolio-item__info-container {
       width: 90%;
-      margin: auto; }
+      margin: auto;
+      position: static; }
+    .portfolio .view-button {
+      display: none; }
     .portfolio .portfolio__grid {
+      margin-top: 2vh;
       display: flex;
       flex-direction: column;
-      width: 100%; }
+      max-width: 90%; }
       .portfolio .portfolio__grid .portfolio-item {
         margin: 1rem 0rem;
         max-width: 100%;
         position: unset;
         height: unset; }
+        .portfolio .portfolio__grid .portfolio-item::after, .portfolio .portfolio__grid .portfolio-item::before {
+          content: none; }
         .portfolio .portfolio__grid .portfolio-item .portfolio-item__image {
           height: 25vh;
           height: 100%;
-          border: none; }
+          border: none;
+          box-shadow: none;
+          border: #435166 8px solid !important; }
         .portfolio .portfolio__grid .portfolio-item .portfolio-item__tags-container {
           display: none;
           opacity: 1;

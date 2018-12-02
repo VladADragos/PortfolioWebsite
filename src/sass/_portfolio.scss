@@ -176,23 +176,6 @@
 .portfolio-item__paragraph {
   color: $darkBlue;
 }
-@keyframes enlargeAnimation {
-  0% {
-    transform: translateX(8%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes enlargeImage {
-  0% {
-    transform: translateX(-8%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 
 .enlarge {
   grid-row: 1/3;
