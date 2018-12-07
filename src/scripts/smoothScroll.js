@@ -19,5 +19,9 @@ const smoothScroll = (selector, duration) => {
   };
   requestAnimationFrame(loop);
 };
-
+export const scrollToPortfolio = () => {
+  console.log("not sc");
+  let target = document.querySelector("#portfolio");
+  target.scrollIntoView();
+};
 export default smoothScroll;

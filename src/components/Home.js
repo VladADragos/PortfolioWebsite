@@ -4,8 +4,11 @@ import { About } from "./about";
 import { PortfolioHeader } from "./portfolioHeader";
 import { Portfolio } from "./portfolio";
 import { Footer } from "./footer";
-
+import { scrollToPortfolio } from "./../scripts/smoothScroll";
 export class Home extends Component {
+  componentDidMount() {
+    scrollToPortfolio();
+  }
   render() {
     return (
       <div className="App">

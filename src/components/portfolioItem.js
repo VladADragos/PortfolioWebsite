@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import enlarge from "./../scripts/enlarge";
+import { NavLink } from "react-router-dom";
 export class PortfolioItem extends Component {
   render() {
     return (
@@ -15,33 +16,26 @@ export class PortfolioItem extends Component {
         <div className="portfolio-item__info-container">
           <div className="portfolio-item___text-container">
             <h2 className="portfolio-item__title">{this.props.title}</h2>
-            <p className="portfolio-item__paragraph">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-              accusamus!
-            </p>
-            <p className="portfolio-item__paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque,
-              veritatis?
-            </p>
-            <p className="portfolio-item__paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              quis?
-            </p>
+            <p className="portfolio-item__paragraph"> {this.props.text[0]}</p>
+            <p className="portfolio-item__paragraph"> {this.props.text[1]}</p>
+            <p className="portfolio-item__paragraph"> {this.props.text[2]}</p>
           </div>
           <div className="portfolio-item__buttons-container">
             <div className="portfolio-item__links-container">
-              <a href={this.props.url} className="portfolio-item__button">
+              <NavLink to={this.props.url} className="portfolio-item__button">
                 View Demo
-              </a>
-              <a className="portfolio-item__button portfolio-item__button--github">
+              </NavLink>
+              <a
+                href={`https://github.com/VladADragos${this.props.url}`}
+                className="portfolio-item__button portfolio-item__button--github"
+              >
                 Github
               </a>
             </div>
             <div className="portfolio-item__tags-container">
-              <p className="portfolio-item__tag">React</p>
-              <p className="portfolio-item__tag">NodeJS</p>
-              <p className="portfolio-item__tag">Firebase</p>
+              <p className="portfolio-item__tag">{this.props.tags[0]}</p>
+              <p className="portfolio-item__tag">{this.props.tags[1]}</p>
+              <p className="portfolio-item__tag">{this.props.tags[2]}</p>
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Buttons } from "./components/Buttons";
 import { Input } from "./components/Input";
 import { Clear } from "./components/Clear";
+import { BackButton } from "./../BackButton";
+
 export class Calculator extends Component {
   constructor(props) {
     super(props);
@@ -81,6 +83,7 @@ export class Calculator extends Component {
   render() {
     return (
       <div className="calculator-container">
+        <BackButton />
         <div className="calculator">
           <Input
             input={this.state.input}

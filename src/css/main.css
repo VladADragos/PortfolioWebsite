@@ -11,13 +11,9 @@
     transform: rotate(xx);
     width: 0%; } }
 @keyframes enlargeAnimation {
-  0% {
-    transform: translateX(8%); }
   100% {
     transform: translateX(0%); } }
 @keyframes enlargeImage {
-  0% {
-    transform: translateX(-8%); }
   100% {
     transform: translateX(0%); } }
 @media screen and (max-width: 450px) {
@@ -56,6 +52,15 @@ button:hover {
 
 .App {
   position: relative; }
+
+.back-button {
+  position: absolute;
+  font-weight: 500;
+  font-size: 2rem;
+  top: 2vh;
+  left: 2vh;
+  background: #394446;
+  padding: 1rem 2rem; }
 
 .navbar {
   width: 100%;
@@ -426,11 +431,9 @@ button:hover {
   .enlarge .portfolio-item__image {
     width: 70%;
     height: 70%;
-    box-shadow: 12px 12px 20px #00000041;
-    animation: enlargeImage 0.4s ease-out forwards; }
+    box-shadow: 12px 12px 20px #00000041; }
   .enlarge .portfolio-item__info-container {
-    opacity: 1;
-    animation: enlargeAnimation 0.4s ease-out forwards; }
+    opacity: 1; }
   .enlarge .portfolio-item__buttons-container,
   .enlarge .portfolio-item___text-container {
     display: block; }
@@ -446,7 +449,8 @@ button:hover {
   background: url(../images/backgroundPattern.svg), linear-gradient(45deg, rgba(0, 21, 60, 0.856), #001337);
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
 
 .calculator {
   width: 600px;

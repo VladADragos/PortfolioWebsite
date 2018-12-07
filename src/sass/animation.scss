@@ -24,7 +24,6 @@
 }
 @keyframes enlargeAnimation {
   0% {
-    transform: translateX(8%);
   }
   100% {
     transform: translateX(0%);
@@ -33,7 +32,6 @@
 
 @keyframes enlargeImage {
   0% {
-    transform: translateX(-8%);
   }
   100% {
     transform: translateX(0%);
