@@ -6,9 +6,13 @@ export class Portfolio extends Component {
     return (
       <div className="portfolio">
         <div className="portfolio__grid">
-          <PortfolioItem title="försvars-makten" enlargen="enlarge" />
-          <PortfolioItem title="fortum" enlargen="" />
-          <PortfolioItem title="saab" enlargen="" />
+          <PortfolioItem
+            title="React-Calculator"
+            enlargen="enlarge"
+            url="/React-Calculator"
+          />
+          <PortfolioItem title="fortum" enlargen="" url="/React-Calculator" />
+          <PortfolioItem title="saab" enlargen="" url="/React-Calculator" />
         </div>
       </div>
     );

@@ -1,24 +1,19 @@
 import React, { Component } from "react";
-
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./css/main.css";
-import { Main } from "./components/main";
-import { About } from "./components/about";
-import { PortfolioHeader } from "./components/portfolioHeader";
-import { Portfolio } from "./components/portfolio";
-import { Footer } from "./components/footer";
+import { Home } from "./components/Home";
+
+import { Calculator } from "./components/portfolioItems/Calculator";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Main />
-        <div className="ocean">
-          <About />
-          <PortfolioHeader />
-          <Portfolio />
-          <Footer />
-        </div>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/React-Calculator" component={Calculator} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

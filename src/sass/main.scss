@@ -1,29 +1,29 @@
-
 @import "variables";
 @import "animation";
 body {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0rem;
   padding: 0rem;
   color: $white;
 }
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0rem;
   padding: 0rem;
-  
 }
 
 a {
   color: $white;
   text-decoration: none;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
-button{
-  &:hover{
+button {
+  &:hover {
     cursor: pointer;
   }
 }
@@ -35,6 +35,7 @@ button{
 @import "_landing";
 @import "_about";
 @import "_portfolio";
+@import "calculator";
 @import "_footer";
 @import "_mobile";
 

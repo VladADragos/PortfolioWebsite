@@ -31,7 +31,7 @@ export class PortfolioItem extends Component {
           </div>
           <div className="portfolio-item__buttons-container">
             <div className="portfolio-item__links-container">
-              <a href="./" className="portfolio-item__button">
+              <a href={this.props.url} className="portfolio-item__button">
                 View Demo
               </a>
               <a className="portfolio-item__button portfolio-item__button--github">
