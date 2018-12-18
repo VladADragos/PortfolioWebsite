@@ -26,6 +26,7 @@ export class PortfolioItem extends Component {
                 View Demo
               </NavLink>
               <a
+                target="_blank"
                 href={`https://github.com/VladADragos${this.props.url}`}
                 className="portfolio-item__button portfolio-item__button--github"
               >

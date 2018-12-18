@@ -41,8 +41,16 @@
   align-self: baseline;
   padding: 0px;
   margin: 0px 0.2rem;
+  font-weight: 600;
 }
-.contact-info__text:hover ~ .contact-info__icon {
+.contact-info__icon {
+  // color: #051421;
+  font-size: 1.5rem;
+}
+.contact-info__item:hover > .contact-info__text {
+  color: #051421;
+}
+.contact-info__item:hover > .contact-info__icon {
   color: #051421;
 }
 

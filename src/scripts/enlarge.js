@@ -1,8 +1,8 @@
 const enlarge = e => {
   let parent = e.currentTarget.parentNode;
   let target = e.currentTarget;
-  console.log(target);
-  for (let i = 0; i < 3; i++) {
+
+  for (let i = 0; i < parent.childNodes.length; i++) {
     if (parent.childNodes[i].classList[1] == "enlarge") {
       parent.childNodes[i].classList.remove("enlarge");
       target.classList.add("enlarge");

@@ -77,6 +77,7 @@ button:hover {
   display: flex; }
 
 .navbar__link {
+  margin: auto;
   font-size: 1.2rem;
   font-weight: 400;
   padding: 1.6rem 1.3rem; }
@@ -122,27 +123,30 @@ button:hover {
   align-items: center; }
 
 .hero__header {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #132f5b;
   line-height: 1; }
 
 .hero__sub-header {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #547a8e;
+  color: #f3f3f3;
   width: 80%; }
 
 .hero__cta {
   margin-top: 3rem;
-  opacity: 0.7;
-  background: #517692;
+  opacity: 0.9;
+  border: #192f5b 0.5rem solid;
+  background: #192f5b93;
+  color: #f1f1f1;
   transition: all 0.5s ease-out;
   width: 60%;
   padding: 0.5rem 1.3rem;
   font-size: 2rem;
-  border-radius: 2rem; }
+  border-radius: 3rem; }
   .hero__cta:hover {
-    background: #292d49; }
+    background: #192f5b;
+    opacity: 1; }
 
 .ocean {
   height: 100%;
@@ -158,6 +162,9 @@ button:hover {
   top: 0%;
   left: 50%;
   transform: translate(-50%, 0%); }
+
+.about__link {
+  color: #032530; }
 
 .about {
   display: flex;
@@ -406,7 +413,7 @@ button:hover {
   margin-bottom: 0.6rem; }
 
 .portfolio-item__title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: none;
   padding: none; }
@@ -526,9 +533,16 @@ button:hover {
   padding: 0px;
   align-self: baseline;
   padding: 0px;
-  margin: 0px 0.2rem; }
+  margin: 0px 0.2rem;
+  font-weight: 600; }
 
-.contact-info__text:hover ~ .contact-info__icon {
+.contact-info__icon {
+  font-size: 1.5rem; }
+
+.contact-info__item:hover > .contact-info__text {
+  color: #051421; }
+
+.contact-info__item:hover > .contact-info__icon {
   color: #051421; }
 
 .contact-form {

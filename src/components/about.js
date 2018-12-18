@@ -20,10 +20,31 @@ export class About extends Component {
           <div className="about-text__container">
             <h2 className="about-text__title">Experience</h2>
             <p className="about-text__paragraph">
-              Hello! My name is Vlad Dragos a TE3 student from Kinna, Sweden.
-              Since a very young age I have had a very deeprooted passion for
-              nearly anything tech related. I love tinkering with code and
-              classical rock.
+              I am mostly self taught, I like learning new technologies and
+              learn new and better ways of coding. For this purpose i use online
+              learning resources such as{" "}
+              <a
+                className="about__link"
+                href="https://www.udemy.com/user/vlad-dragos-2/"
+              >
+                Udemy
+              </a>
+              ,{" "}
+              <a
+                className="about__link"
+                href="https://teamtreehouse.com/vladdragos
+"
+              >
+                Team Tree House
+              </a>{" "}
+              and{" "}
+              <a
+                className="about__link"
+                href="https://www.codecademy.com/catalog/subject/all"
+              >
+                Codecademy
+              </a>
+              .
             </p>
           </div>
         </div>

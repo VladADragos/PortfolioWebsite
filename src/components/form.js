@@ -29,7 +29,7 @@ export class Form extends Component {
     const { name, email, message } = this.state;
     return (
       <form
-        className="contact-form"
+        className="contact contact-form"
         onSubmit={this.handleSubmit}
         name="contact-form"
         method="POST"

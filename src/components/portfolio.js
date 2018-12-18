@@ -35,7 +35,7 @@ export class Portfolio extends Component {
           />
           <PortfolioItem
             title="saab"
-            enlargen="e"
+            enlargen=""
             url="/React-Calculator"
             tags={this.state.calculator.tags}
             text={this.state.calculator.textBody}

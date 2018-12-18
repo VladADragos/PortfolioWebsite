@@ -1,4 +1,5 @@
 const smoothScroll = (selector, duration) => {
+  console.log("Smoothscroll script imported");
   let target = document.querySelector(selector);
   let targetPosition = target.getBoundingClientRect().top;
   let startPosition = window.pageYOffset || window.scrollY;
