@@ -15,7 +15,7 @@ export class Portfolio extends Component {
           [
             "A simple calculator app build with React and styled with SASS.",
             "The app makes use of the eval function that turns strings into javascript statements.",
-            "Validation is implemented to avoid errors and stop malicious from being run"
+            "Validation is implemented to avoid errors and stop malicious code from being run"
           ],
           ["WORK IN PROGRESS", "Schedule/Productivity app"],
           ["WORK IN PROGRESS", "Social Media App for cats"]
