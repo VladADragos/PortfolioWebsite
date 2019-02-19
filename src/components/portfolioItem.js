@@ -27,16 +27,16 @@ export class PortfolioItem extends Component {
               </NavLink>
               <a
                 target="_blank"
-                href={`https://github.com/VladADragos${this.props.url}`}
+                href={`https://github.com/VladADragos/${this.props.title}`}
                 className="portfolio-item__button portfolio-item__button--github"
               >
                 Github
               </a>
             </div>
             <div className="portfolio-item__tags-container">
-              <p className="portfolio-item__tag">{this.props.tags[0]}</p>
-              <p className="portfolio-item__tag">{this.props.tags[1]}</p>
-              <p className="portfolio-item__tag">{this.props.tags[2]}</p>
+              {this.props.tags.map(tag => (
+                <p className="portfolio-item__tag">{tag}</p>
+              ))}
             </div>
           </div>
         </div>
