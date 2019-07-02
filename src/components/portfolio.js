@@ -44,7 +44,7 @@ export class Portfolio extends Component {
           <PortfolioItem
             title="Catbook"
             enlargen=""
-            url="/"
+            url="www.catbook.se"
             tags={this.state.calculator.tags[2]}
             text={this.state.calculator.textBody[2]}
           />
