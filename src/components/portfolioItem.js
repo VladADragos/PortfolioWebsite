@@ -22,9 +22,13 @@ export class PortfolioItem extends Component {
           </div>
           <div className="portfolio-item__buttons-container">
             <div className="portfolio-item__links-container">
-              <NavLink to={this.props.url} className="portfolio-item__button">
+              <a
+                href={this.props.url}
+                className="portfolio-item__button"
+                target="_blank"
+              >
                 View Demo
-              </NavLink>
+              </a>
               <a
                 target="_blank"
                 href={`https://github.com/VladADragos/${this.props.title}`}
