@@ -11,7 +11,7 @@ export class About extends Component {
           <div className="about-text__container">
             <h2 className="about-text__title">About</h2>
             <p className="about-text__paragraph">
-              Hello! My name is Vlad Dragos a TE3 student from Kinna, Sweden.
+              Hello! My name is Vlad Dragos a TE3 graduate from Kinna, Sweden.
               Since a very young age I have had a very deeprooted passion for
               nearly anything tech related. I love tinkering with code and
               classical rock.
