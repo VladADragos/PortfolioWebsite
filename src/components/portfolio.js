@@ -30,23 +30,11 @@ export class Portfolio extends Component {
     this.state = {
       portfolio: [
         {
-          title: "React-Calculator",
-          url: "/React-Calculator",
-          isLive: true,
-          tags: ["React", "JavaScript"],
-          enlargen: "enlarge",
-          text: [
-            "A simple calculator app build with React and styled with SASS.",
-            "The app makes use of the eval function that turns strings into javascript statements.",
-            "Validation is implemented to avoid errors and stop malicious code from being run"
-          ]
-        },
-        {
           title: "Catbook",
-          url: "/http://www.catbook.se/",
+          url: "http://www.catbook.se/",
           isLive: true,
           tags: ["PHP", "JavaScript", "CSS", "SQL"],
-          enlargen: "",
+          enlargen: "enlarge",
           text: [
             "WORK IN PROGRESS",
             "Semy finished(working version 1.0)",
@@ -57,14 +45,25 @@ export class Portfolio extends Component {
           ]
         },
         {
+          title: "React-Calculator",
+          url: "/React-Calculator",
+          isLive: true,
+          tags: ["React", "JavaScript"],
+          enlargen: "",
+          text: [
+            "A simple calculator app build with React and styled with SASS.",
+            "The app makes use of the eval function that turns strings into javascript statements.",
+            "Validation is implemented to avoid errors and stop malicious code from being run"
+          ]
+        },
+        {
           title: "Openstocks",
-          url: "/http://www.openstocks.se/",
+          url: "http://www.openstocks.se/",
           isLive: false,
           tags: ["React", "Node", "Express", "TS", "Charts"],
           enlargen: "",
           text: [
             "WORK IN PROGRESS",
-            "Partially working",
             "Fetches api data through an express server to avoid cors errors and hide api keys",
             "Data displayed in chart and table form"
           ]
