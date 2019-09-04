@@ -4,18 +4,28 @@
   100% {
     transform: rotate(xx);
     width: 100%; } }
+
 @keyframes AnimateAfterOut {
   0% {
     width: 100%; }
   100% {
     transform: rotate(xx);
     width: 0%; } }
+
+@keyframes portfolioMobile {
+  0% { }
+  100% { } }
+
 @keyframes enlargeAnimation {
+  0% { }
   100% {
     transform: translateX(0%); } }
+
 @keyframes enlargeImage {
+  0% { }
   100% {
     transform: translateX(0%); } }
+
 @media screen and (max-width: 450px) {
   @keyframes enlargeAnimation {
     0% {
@@ -27,6 +37,7 @@
       transform: translateX(0%); }
     100% {
       transform: translateX(0%); } } }
+
 body {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
@@ -202,20 +213,6 @@ button:hover {
   border-left: #032530a8 2rem solid;
   padding: 0rem 1rem 1rem 1rem;
   position: relative; }
-  .about-text__container::after {
-    z-index: -1;
-    content: "";
-    animation: AnimateAfterOut 0.3s forwards ease-in;
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    background: #17455383;
-    top: 0%;
-    left: 0%; }
-  .about-text__container:hover::after {
-    padding: 1rem;
-    animation: AnimateAfter 0.3s forwards ease-in;
-    transform-origin: left; }
 
 .skills-grid {
   display: flex;
@@ -585,48 +582,39 @@ button:hover {
 @media screen and (max-width: 1450px) {
   .ocean {
     height: 100%; }
-
   .hero__image {
     width: 85vw; }
-
   .about__image {
     width: 85vw; }
-
   .about-text {
     width: 70%; }
-
   .skills {
     width: 55%; } }
+
 @media screen and (max-width: 1200px) {
   .hero__image {
     width: 100vw; }
-
   .about__image {
     width: 100vw; } }
+
 @media screen and (max-width: 1000px) {
   .navbar {
     background: #476480;
     align-items: center; }
-
   .navbar--label {
     display: inline-block;
     margin-right: 3rem; }
-
   .navbar--header {
     margin-left: 2rem;
     width: 28%; }
-
   .navbar__checkbox:checked + .navbar {
     display: none; }
-
   .navbar__links-container {
     display: none;
     background: #1d3b4f; }
-
   .navbar__label {
     font-size: 4rem;
     display: inline; }
-
   .navbar__checkbox:checked ~ .navbar__links-container {
     width: 100%;
     text-align: right;
@@ -641,16 +629,14 @@ button:hover {
       font-size: 3rem; }
       .navbar__checkbox:checked ~ .navbar__links-container .navbar__link:hover {
         background: #1d3b4f; }
-
   .hero__image {
     width: 100vw; }
-
   .about__image {
     width: 100vw; } }
+
 @media screen and (max-width: 720px) {
   html {
     font-size: 14px; }
-
   .hero {
     height: 55vh;
     background: url("../images/starsMobile.svg"), linear-gradient(-60deg, #292d49, #517692); }
@@ -682,7 +668,6 @@ button:hover {
         .hero .hero__container .hero__text-container .button-cta {
           opacity: 1;
           font-weight: 700; }
-
   .portfolio-header {
     margin-top: 2vw;
     display: flex;
@@ -715,7 +700,6 @@ button:hover {
       .portfolio-header .portfolio-header__title-container::before {
         right: 50%;
         top: -25%; }
-
   .portfolio {
     margin-top: 0vh; }
     .portfolio .portfolio__grid {
@@ -735,10 +719,10 @@ button:hover {
         .portfolio .portfolio__grid .portfolio-item a .portfolio-item__image {
           height: 30%;
           border: none; } }
+
 @media screen and (max-width: 800px) {
   html {
     font-size: 12px; }
-
   .hero {
     height: 55vh;
     background: url("../images/starsMobile.svg"), linear-gradient(-60deg, #292d49, #517692); }
@@ -770,7 +754,6 @@ button:hover {
         .hero .hero__container .hero__text-container .button-cta {
           opacity: 1;
           font-weight: 700; }
-
   .portfolio-header {
     top: 0;
     left: 0;
@@ -806,7 +789,6 @@ button:hover {
       .portfolio-header .portfolio-header__title::before {
         right: 50%;
         top: -25%; }
-
   .portfolio {
     margin-top: 0vh; }
     .portfolio .portfolio-item__tags-container {
@@ -853,7 +835,6 @@ button:hover {
           box-shadow: none;
           border: #435166 8px solid !important;
           z-index: 100; }
-
   .about .about__image {
     width: 300vw;
     display: none; }
@@ -900,7 +881,6 @@ button:hover {
       .about .about-text .about-text__container p {
         padding-bottom: 0.7rem;
         font-size: 1.5rem; }
-
   .skills-grid {
     border: none;
     flex-direction: column;
@@ -929,12 +909,10 @@ button:hover {
       background: #b7bc7c; }
     .skills-grid .skills-item--learning {
       background: #bc9f71; }
-
   .mobile-menu-label {
     font-size: 4rem; }
   .mobile-menu:checked ~ nav h2 {
     font-size: 2rem; }
-
   .footer {
     height: 100%;
     clip-path: none;
@@ -971,7 +949,6 @@ button:hover {
         .footer .footer__container .contact-info .contact-info__text,
         .footer .footer__container .contact-info .contact-info__icon {
           font-size: 1.4rem; }
-
   .enlarge {
     grid-row: 1/1;
     grid-column: 1/1;
@@ -1001,6 +978,5 @@ button:hover {
         width: 100%; }
         .enlarge .portfolio-item__info-container__tags .main-buttons {
           position: static; } }
-/* sass --watch sass/main.scss:css/main.css */
 
-/*# sourceMappingURL=main.css.map */
+/* sass --watch sass/main.scss:css/main.css */

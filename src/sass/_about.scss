@@ -54,23 +54,23 @@
   border-left: #032530a8 2rem solid;
   padding: 0rem 1rem 1rem 1rem;
   position: relative;
-  &::after {
-    z-index: -1;
-    content: "";
-    animation: AnimateAfterOut 0.3s forwards ease-in;
-    width: 0%;
-    height: 100%;
-    position: absolute;
+  // &::after {
+  //   z-index: -1;
+  //   content: "";
+  //   animation: AnimateAfterOut 0.3s forwards ease-in;
+  //   width: 0%;
+  //   height: 100%;
+  //   position: absolute;
 
-    background: #17455383;
-    top: 0%;
-    left: 0%;
-  }
-  &:hover::after {
-    padding: 1rem;
-    animation: AnimateAfter 0.3s forwards ease-in;
-    transform-origin: left;
-  }
+  //   background: #17455383;
+  //   top: 0%;
+  //   left: 0%;
+  // }
+  // &:hover::after {
+  //   padding: 1rem;
+  //   animation: AnimateAfter 0.3s forwards ease-in;
+  //   transform-origin: left;
+  // }
 }
 .skills-grid {
   display: flex;
