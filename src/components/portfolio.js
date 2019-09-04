@@ -1,4 +1,4 @@
-import React, { Component, useState, Fragment, useEffect } from 'react';
+import React, { useState } from 'react';
 import PortfolioItem from './PortfolioItem';
 
 export const Portfolio = () => {
@@ -53,11 +53,6 @@ export const Portfolio = () => {
 
     setPortfolio([...portfolio]);
   };
-
-  // useEffect(() => {
-  //   console.log('updated');
-  // });
-
   return (
     <div className='portfolio'>
       <div className='portfolio__grid'>
