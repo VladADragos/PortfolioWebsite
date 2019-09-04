@@ -3,7 +3,7 @@ import { Main } from './main';
 import { About } from './about';
 import { PortfolioHeader } from '../portfolioHeader';
 import { Footer } from '../layout/footer';
-import { Portfolio } from '../Portfolio';
+import Portfolio from '../Portfolio';
 export class Home extends Component {
   render() {
     return (

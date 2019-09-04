@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PortfolioItem from './PortfolioItem';
 
-export const Portfolio = () => {
+const Portfolio = () => {
   const initialState = [
     {
       title: 'Catbook',
@@ -70,3 +70,5 @@ export const Portfolio = () => {
     </div>
   );
 };
+
+export default Portfolio;
