@@ -5,8 +5,8 @@ const Portfolio = () => {
   const initialState = [
     {
       title: "Routiner",
-      url: "/",
-      isLive: false,
+      url: "http://routiner.se",
+      isLive: true,
       tags: ["React", "SASS", "Node.js", "REST", "API"],
       enlargen: "",
       text: [
