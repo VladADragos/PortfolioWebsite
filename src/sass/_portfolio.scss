@@ -34,7 +34,7 @@
   align-items: center;
 }
 .portfolio__grid {
-  max-width: 80%;
+  max-width: 85%;
   display: grid;
   grid-gap: 2.5vw;
   grid-template-rows: repeat(2, 1fr);
@@ -64,7 +64,7 @@
 
   &::after {
     opacity: 0;
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
