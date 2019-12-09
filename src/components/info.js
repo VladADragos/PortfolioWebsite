@@ -4,7 +4,7 @@ export class Info extends Component {
   render() {
     return (
       <div className="contact-info">
-        <InfoItem link="./" text="linkedin" icon="fab fa-linkedin-in" />
+        {/* <InfoItem link="./" text="linkedin" icon="fab fa-linkedin-in" /> */}
         <InfoItem
           link="https://github.com/VladADragos"
           text="Github"

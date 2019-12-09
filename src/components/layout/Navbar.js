@@ -33,6 +33,9 @@ const Navbar = () => {
           <a href='./' className='navbar__link'>
             HOME
           </a>
+          <a href='https://docs.google.com/document/d/1OOHycUcBDg2OrI9cFXekymovHYsKSR6PtFPt2sGXX9Q/edit?usp=sharing' target="blank" className='navbar__link'>
+            RESUME
+          </a>
           <a
             className='navbar__link navbar__link--portfolio'
             onClick={handleScroll}>
