@@ -5,12 +5,18 @@ import { Home } from './components/pages/Home';
 
 import { Calculator } from './components/portfolioItems/Calculator';
 
+function temp(){
+	
+	return <React.Fragment></React.Fragment>;
+}
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
           <Route path='/' component={Home} exact />
+	<Route path='/zohoverify' component={temp} />
           <Route path='/React-Calculator' component={Calculator} />
         </Switch>
       </BrowserRouter>
