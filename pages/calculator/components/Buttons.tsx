@@ -1,0 +1,141 @@
+import React, { Component } from "react";
+
+interface ButtonsProps {
+  handleClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  handleEnter: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
+export default function Buttons({ handleClick, handleEnter }: ButtonsProps) {
+
+  return (
+    <React.Fragment>
+      <button
+        type="button"
+        className="button"
+        value="7"
+        onClick={handleClick}
+      >
+        7
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="8"
+        onClick={handleClick}
+      >
+        8
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="9"
+        onClick={handleClick}
+      >
+        9
+          </button>
+      <button
+        className="button operator"
+        value="/"
+        onClick={handleClick}
+      >
+        /
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="4"
+        onClick={handleClick}
+      >
+        4
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="5"
+        onClick={handleClick}
+      >
+        5
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="6"
+        onClick={handleClick}
+      >
+        6
+          </button>
+      <button
+        type="button"
+        className="button operator"
+        value="*"
+        onClick={handleClick}
+      >
+        x
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="1"
+        onClick={handleClick}
+      >
+        1
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="2"
+        onClick={handleClick}
+      >
+        2
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="3"
+        onClick={handleClick}
+      >
+        3
+          </button>
+      <button
+        type="button"
+        className="button operator"
+        value="+"
+        onClick={handleClick}
+      >
+        +
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="."
+        onClick={handleClick}
+      >
+        .
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="0"
+        onClick={handleClick}
+      >
+        0
+          </button>
+      <button
+        type="button"
+        className="button"
+        value="="
+        onClick={handleEnter}
+      >
+        =
+          </button>
+      <button
+        type="button"
+        className="button operator"
+        value="-"
+        onClick={handleClick}
+      >
+        -
+          </button>
+    </React.Fragment>
+  );
+}
+

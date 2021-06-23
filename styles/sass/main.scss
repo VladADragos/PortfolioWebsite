@@ -1,0 +1,25 @@
+@import "variables";
+@import "animation";
+
+.App {
+  position: relative;
+}
+.back-button {
+  position: absolute;
+  font-weight: 500;
+  font-size: 2rem;
+  top: 2vh;
+  left: 2vh;
+  background: rgb(57, 68, 70);
+  padding: 1rem 2rem;
+}
+
+@import "_navbar";
+@import "_landing";
+@import "_about";
+@import "_portfolio";
+@import "calculator";
+@import "_footer";
+@import "_mobile";
+
+/* sass --watch sass/main.scss:css/main.css */

@@ -1,0 +1,63 @@
+.hero {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  height: $sectionHeight;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  background: url("../../images/stars.svg"),
+    linear-gradient(-60deg, #292d49, #517692);
+}
+.hero__image {
+  z-index: 1;
+  width: $iceburgImageWidth;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.hero__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 50%;
+  flex-direction: column;
+}
+.hero__text-container {
+  display: flex;
+  flex-direction: column;
+
+  z-index: 2;
+  text-align: center;
+  align-items: center;
+}
+.hero__header {
+  font-size: 4rem;
+  color: #132f5b;
+  line-height: 1;
+}
+.hero__sub-header {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f3f3f3;
+  width: 80%;
+}
+.hero__cta {
+  margin-top: 3rem;
+  opacity: 0.9;
+  border: #192f5b 0.5rem solid;
+  background: #192f5b93;
+  color: #f1f1f1;
+  transition: all 0.5s ease-out;
+  width: 60%;
+  padding: 0.5rem 1.3rem;
+  font-size: 2rem;
+  border-radius: 3rem;
+  &:hover {
+    background: #192f5b;
+    opacity: 1;
+  }
+}
