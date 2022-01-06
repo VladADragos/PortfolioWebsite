@@ -10,18 +10,15 @@ function temp(){
 	return <React.Fragment></React.Fragment>;
 }
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route path='/' component={Home} exact />
-	<Route path='/zohoverify' component={temp} />
-          <Route path='/React-Calculator' component={Calculator} />
-        </Switch>
-      </BrowserRouter>
-    );
-  }
+function App(){
+  return ( <BrowserRouter>
+    <Switch>
+      <Route path='/' component={Home} exact />
+<Route path='/zohoverify' component={temp} />
+      <Route path='/React-Calculator' component={Calculator} />
+    </Switch>
+  </BrowserRouter>)
 }
+
 
 export default App;
