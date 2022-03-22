@@ -53,3 +53,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+.pnpm-debug.log

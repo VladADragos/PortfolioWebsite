@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import React from "react";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
@@ -15,7 +14,7 @@ const Navbar = () => {
     <nav className="flex w-full justify-between pt-4 items-center">
       <header>
         {" "}
-        <Image src={logo} alt="logo" ></Image>{" "}
+        <img src={logo.src} alt="logo" ></img>{" "}
       </header>
 
       <ul className="flex gap-6 font-medium">
@@ -30,13 +29,12 @@ const Navbar = () => {
   );
 };
 
-const PortfolioItem = ({image}) => {
+const PortfolioItem: React.FC<{ image:StaticImageData }> = ({ image }) => {
   return (
     <div className=" ">
       <div className="">
         <div className="border-4 border-black">
-
-        <Image src={image} alt="catbook" layout="responsive"></Image>
+          <img src={image.src} alt="catbook"></img>
         </div>
         <div className="w-12 h-4 bg-black mx-auto"></div>
       </div>
