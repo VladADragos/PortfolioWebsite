@@ -56,7 +56,7 @@ function PortfolioOverview({ routiner, catbook }) {
       <h3 className="mb-4">Some projects</h3>
       <div className="grid grid-cols-3 gap-12 xl:w-4/5">
         {PortfolioItems.map((props, index) => (
-          <PortfolioItem {...props} />
+          <PortfolioItem {...props} key={index} />
         ))}
       </div>
     </div>
@@ -93,12 +93,11 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           <h4 className="font-medium">source</h4>
           <DiGithubBadge className="text-xl" />
         </a>
-        <a
-          className="hover:underline text-slate-600"
-          href={"/portfolio?item=" + name.toLocaleLowerCase()}
-        >
-          <h4 className="font-medium">learn more</h4>
-        </a>
+        <Link href={"portfolio?item=" + name.toLocaleLowerCase()}>
+          <a className="hover:underline text-slate-600">
+            <h4 className="font-medium">learn more</h4>
+          </a>
+        </Link>
       </div>
     </div>
   );
