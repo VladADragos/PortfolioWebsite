@@ -1,15 +1,16 @@
-
-
-import React from 'react'
-
+import React from "react";
+import Navbar from "./Navbar";
 type Props = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-const Layout: React.FC<Props> = ({children}) => {
+const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <div className='container bg-red-700'> {children} </div>
-  )
-}
+    <div className=" px-20 bg-slate-50  min-h-screen font-poppins font-bold text-lg  ">
+      <Navbar />
+      {children}
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;

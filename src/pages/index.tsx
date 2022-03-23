@@ -2,91 +2,104 @@ import type { NextPage } from "next";
 import React from "react";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
-import logo from "../images/logo.png";
+
 import catbook from "../images/catbook.png";
 import routiner from "../images/routiner.png";
 import { DiGithubBadge } from "react-icons/di";
 import { HiOutlineLink } from "react-icons/hi";
-const NavLinks = ["Home", "Resume", "Contact", "Portfolio", "About", "Github"];
+import Navbar from "../components/Navbar";
+import Link from "next/link";
 
-const Navbar = () => {
+const Home: NextPage = () => {
   return (
-    <nav className="flex w-full justify-between pt-4 items-center">
-      <header>
-        {" "}
-        <img src={logo.src} alt="logo" ></img>{" "}
-      </header>
+    <section className="mt-32 flex flex-col gap-12">
+      <div>
+        <div className=" ">
+          <h2 className="font-poppins font-medium text-2xl 2xl:text-3xl ">
+            Hello! My name is Vlad. I'm a
+          </h2>
+          <h1 className="font-pacifico text-5xl text-brand-blue-medium desktop-sm:text-4xl desktop-md:text-5xl desktop-lg:text-6xl    ">
+            Front-end oriented full-stack developer
+          </h1>
+        </div>
+        <div className="pt-5 flex gap-4">
+          <Button type="primary">Portfolio</Button>
+          <Button type="secondary">Contact</Button>
+        </div>
+      </div>
 
-      <ul className="flex gap-6 font-medium">
-        {NavLinks.map((link, index) => (
-          <li key={index} className="hover:underline">
-            {" "}
-            <a href="#"> {link} </a>{" "}
-          </li>
-        ))}
-      </ul>
-    </nav>
+      <PortfolioOverview routiner={routiner} catbook={catbook} />
+    </section>
   );
 };
 
-const PortfolioItem: React.FC<{ image:StaticImageData }> = ({ image }) => {
+export default Home;
+
+const PortfolioItems = [
+  {
+    name: "Routiner",
+    demo: "http://routiner.se/",
+    github: "https://github.com/VladADragos/Routiner",
+    image: routiner,
+  },
+  {
+    name: "Catbook",
+    demo: "http://www.catbook.se/",
+    github: "https://github.com/VladADragos/catbook",
+    image: catbook,
+  },
+];
+
+function PortfolioOverview({ routiner, catbook }) {
   return (
-    <div className=" ">
-      <div className="">
-        <div className="border-4 border-black">
-          <img src={image.src} alt="catbook"></img>
-        </div>
-        <div className="w-12 h-4 bg-black mx-auto"></div>
+    <div>
+      <h3 className="mb-4">Some projects</h3>
+      <div className="grid grid-cols-3 gap-12 xl:w-4/5">
+        {PortfolioItems.map((props, index) => (
+          <PortfolioItem {...props} />
+        ))}
       </div>
+    </div>
+  );
+}
+
+type PortfolioItemProps = {
+  name: string;
+  github: string;
+  demo: string;
+  image: StaticImageData;
+};
+const PortfolioItem: React.FC<PortfolioItemProps> = ({
+  name,
+  demo,
+  github,
+  image,
+}) => {
+  return (
+    <div className=" hover:scale-110 transition-all ease-out duration-700">
+      <a href={demo} target="_blank">
+        <div className="">
+          <div className="border-4 border-black">
+            <img src={image.src} alt="catbook"></img>
+          </div>
+          <div className="w-12 h-4 bg-black mx-auto"></div>
+        </div>
+      </a>
       <div className="flex gap-4">
-        <a className="flex items-center hover:underline gap-1" href="#">
-          <h4 className="font-medium">demo</h4>
-          <HiOutlineLink className="text-lg" />
-        </a>
-        <a className="flex items-center hover:underline gap-1" href="#">
+        <a
+          className="flex items-center hover:underline gap-1 text-slate-700"
+          href={github}
+        >
           <h4 className="font-medium">source</h4>
           <DiGithubBadge className="text-xl" />
         </a>
-        <a className="hover:underline" href="#">
+        <a
+          className="hover:underline text-slate-600"
+          href={"/portfolio?item=" + name.toLocaleLowerCase()}
+        >
           <h4 className="font-medium">learn more</h4>
         </a>
       </div>
     </div>
   );
 };
-
-const Home: NextPage = () => {
-  return (
-    <div className=" px-20 bg-slate-50  min-h-screen font-poppins font-bold text-lg  ">
-      <Navbar />
-
-      <section className="mt-36 flex flex-col gap-12">
-        <div>
-          <div className=" ">
-            <h2 className="font-poppins font-medium">
-              Hello! My name is Vlad. I'm a
-            </h2>
-            <h1 className="font-pacifico text-4xl text-brand-blue-medium ">
-              Front-end oriented full-stack developer
-            </h1>
-          </div>
-          <div className="pt-5 flex gap-4">
-            <Button className="bg-brand-orange-medium">Portfolio</Button>
-            <Button className="bg-brand-blue-medium">Contact</Button>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="mb-2">Some projects</h3>
-          <div className="grid grid-cols-3 gap-12 xl:w-4/5">
-            <PortfolioItem image={routiner} />
-            <PortfolioItem image={catbook} />
-            <PortfolioItem image={catbook} />
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default Home;
