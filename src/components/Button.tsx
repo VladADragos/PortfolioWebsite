@@ -1,5 +1,4 @@
 import React from "react";
-import WithClasses from "../utils/withClasses";
 
 type Props = {
   children: React.ReactNode;
