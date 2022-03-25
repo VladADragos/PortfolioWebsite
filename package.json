@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "preinstall": "[ \"$NODE_ENV\" = production ] && exit 0; rm pnpm-lock.yaml && npx only-allow pnpm",
+    "preinstall": "[ \"$NODE_ENV\" = production ] && exit 0; echo productionMode && rm pnpm-lock.yaml && npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
