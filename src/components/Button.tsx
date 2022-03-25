@@ -19,7 +19,7 @@ const Container: React.FC<PropsContainer> = ({ children, link, redirect }) => {
   if (!link && !redirect) return <></>;
   if (link && redirect)
     return (
-      <a id="regular-link" href={link} target="_blank">
+      <a id="regular-link" href={link} target="_blank" rel='noreferrer'>
         {children}
       </a>
     );

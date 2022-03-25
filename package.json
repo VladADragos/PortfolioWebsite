@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf node_modules pnpm-lock.yaml package-lock.json  .next",
-    "export": "next export"
+    "export": "next export",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "latest",
@@ -17,6 +18,8 @@
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",

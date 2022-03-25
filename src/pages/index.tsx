@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <div>
         <div className=" ">
           <h2 className="font-poppins font-medium text-2xl 2xl:text-3xl ">
-            Hello! My name is Vlad. I'm a
+            Hello! My name is Vlad. I&apos;m a
           </h2>
           <h1 className="font-pacifico text-5xl text-brand-blue-medium desktop-sm:text-4xl desktop-md:text-5xl desktop-lg:text-6xl    ">
             Front-end oriented full-stack developer
@@ -82,7 +82,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
 }) => {
   return (
     <div className=" hover:scale-110 transition-all ease-out duration-700">
-      <a href={demo} target="_blank">
+      <a href={demo} target="_blank" rel="noreferrer">
         <div className="">
           <div className="border-4 border-black">
             <img src={image.src} alt="catbook"></img>

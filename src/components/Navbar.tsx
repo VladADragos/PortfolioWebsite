@@ -37,7 +37,12 @@ const Navbar: React.FC = () => {
         {NavLinks.map(({ name, path, redirect }, index) => (
           <li key={index} className={` ${0}`}>
             {redirect ? (
-              <a href={path} target={"_blank"} className="link-effect-hover">
+              <a
+                href={path}
+                target={"_blank"}
+                className="link-effect-hover"
+                rel="noreferrer"
+              >
                 {name}
               </a>
             ) : (
