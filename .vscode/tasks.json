@@ -1,5 +1,6 @@
 {
   "version": "2.0.0",
+  
   "tasks": [
     {
       "type": "npm",
@@ -7,6 +8,34 @@
       "problemMatcher": [],
       "label": "dev",
       "detail": "next dev"
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "problemMatcher": [],
+      "label": "clean",
+      "detail": "rm -rf node_modules pnpm-lock.yaml package-lock.json  .next"
+    },
+    {
+      "type": "npm",
+      "script": "pnpm:install",
+      "problemMatcher": [],
+      "label": "install",
+      "detail": "pnpm i"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": [],
+      "label": "lint",
+      "detail": "next lint src"
+    },
+    {
+      "type": "npm",
+      "script": "format",
+      "problemMatcher": [],
+      "label": "format",
+      "detail": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
     }
   ]
 }

@@ -1,9 +1,7 @@
-import type {NextPage} from 'next'
+import type { NextPage } from 'next';
 
 const Portfolio: NextPage = () => {
+	return <div>portfolio</div>;
+};
 
-return (<div>portfolio</div>)
-
-}
-
-export default Portfolio
+export default Portfolio;
