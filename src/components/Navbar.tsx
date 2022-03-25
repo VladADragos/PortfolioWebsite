@@ -1,22 +1,24 @@
 import logo from "../images/logo.png";
 import { useRouter } from "next/router";
 import Link from "next/link";
+
+import Routes from "../Routes";
 type NavLink = {
   name: string;
   path: string;
   redirect: boolean;
 };
 const NavLinks: NavLink[] = [
-  { name: "Home", path: "/", redirect: false },
+  { name: "Home", path: Routes.home, redirect: false },
   {
     name: "Resume",
-    path: "https://docs.google.com/document/d/1OOHycUcBDg2OrI9cFXekymovHYsKSR6PtFPt2sGXX9Q/edit",
+    path: Routes.resume,
     redirect: true,
   },
-  { name: "Contact", path: "/contact", redirect: false },
-  { name: "Portfolio", path: "/portfolio", redirect: false },
-  { name: "About", path: "/about", redirect: false },
-  { name: "Github", path: "https://github.com/VladADragos/", redirect: true },
+  { name: "Contact", path: Routes.contact, redirect: false },
+  { name: "Portfolio", path: Routes.portfolio.index, redirect: false },
+  { name: "About", path: Routes.about, redirect: false },
+  { name: "Github", path: Routes.github, redirect: true },
 ];
 const Navbar: React.FC = () => {
   const { pathname } = useRouter();
@@ -24,7 +26,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="flex w-full justify-between pt-4 items-center">
       <header className="hover:scale-105 transition-all ease-in-out duration-400">
-        <Link href="/">
+        <Link href={Routes.home}>
           <a>
             <img src={logo.src} alt="logo"></img>
           </a>
@@ -35,15 +37,11 @@ const Navbar: React.FC = () => {
         {NavLinks.map(({ name, path, redirect }, index) => (
           <li key={index} className={` ${0}`}>
             {redirect ? (
-              <a
-                href={`${path}`}
-                target={redirect ? "_blank" : "_parent"}
-                className="link-effect-hover"
-              >
+              <a href={path} target={"_blank"} className="link-effect-hover">
                 {name}
               </a>
             ) : (
-              <Link href={`/${path}`}>
+              <Link href={path}>
                 <a
                   className={
                     pathname === path

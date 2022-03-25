@@ -9,6 +9,7 @@ import { DiGithubBadge } from "react-icons/di";
 import { HiOutlineLink } from "react-icons/hi";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import Routes from "../Routes";
 
 const Home: NextPage = () => {
   return (
@@ -23,8 +24,12 @@ const Home: NextPage = () => {
           </h1>
         </div>
         <div className="pt-5 flex gap-4">
-          <Button type="primary">Portfolio</Button>
-          <Button type="secondary">Contact</Button>
+          <Button type="primary" link={Routes.portfolio.index}>
+            Portfolio
+          </Button>
+          <Button type="secondary" link={Routes.resume} redirect>
+            Contact
+          </Button>
         </div>
       </div>
 
@@ -38,14 +43,14 @@ export default Home;
 const PortfolioItems = [
   {
     name: "Routiner",
-    demo: "http://routiner.se/",
-    github: "https://github.com/VladADragos/Routiner",
+    demo: Routes.projects.routiner.demo,
+    github: Routes.projects.routiner.source,
     image: routiner,
   },
   {
     name: "Catbook",
-    demo: "http://www.catbook.se/",
-    github: "https://github.com/VladADragos/catbook",
+    demo: Routes.projects.catbook.demo,
+    github: Routes.projects.catbook.source,
     image: catbook,
   },
 ];
@@ -93,7 +98,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           <h4 className="font-medium">source</h4>
           <DiGithubBadge className="text-xl" />
         </a>
-        <Link href={"portfolio?item=" + name.toLocaleLowerCase()}>
+        <Link href={Routes.portfolio.detail(name)}>
           <a className="hover:underline text-slate-600">
             <h4 className="font-medium">learn more</h4>
           </a>
