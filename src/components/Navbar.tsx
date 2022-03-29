@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
 	console.log(pathname);
 	return (
 		<nav className='flex w-full justify-between pt-4 items-center'>
-			<header className='hover:scale-105 transition-all ease-in-out duration-400'>
+			<header className='hover:scale-105 transition-all ease-in-out duration-400  '>
 				<Link href={Routes.home}>
 					<a>
 						<img src={logo.src} alt='logo'></img>

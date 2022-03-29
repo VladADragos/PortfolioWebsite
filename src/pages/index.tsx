@@ -10,6 +10,7 @@ import { HiOutlineLink } from 'react-icons/hi';
 import Navbar from '../components/Navbar';
 import Link from 'next/link';
 import Routes from '../Routes';
+import { StaticImageData } from 'next/image';
 
 const Home: NextPage = () => {
 	return (
@@ -80,6 +81,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ name, demo, github, image
 			<a href={demo} target='_blank' rel='noreferrer'>
 				<div className=''>
 					<div className='border-4 border-black'>
+						{/*eslint-disable-next-line @next/next/no-img-element*/}
 						<img src={image.src} alt='catbook'></img>
 					</div>
 					<div className='w-12 h-4 bg-black mx-auto'></div>
