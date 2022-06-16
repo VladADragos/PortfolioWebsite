@@ -57,3 +57,5 @@ yarn-error.log*
 .vercel
 
 .pnpm-debug.log
+
+tsconfig.tsbuildinfo

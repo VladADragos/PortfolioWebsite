@@ -29,6 +29,7 @@ module.exports = {
 				},
 				brand: {
 					blue: {
+						dim: '#c2c4d6',
 						light: '#404cbf',
 						medium: '#0A125C',
 						dark: '#0B124E'
@@ -49,3 +50,4 @@ module.exports = {
 
 	plugins: []
 };
+

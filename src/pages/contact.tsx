@@ -3,11 +3,11 @@ import Button from '../components/Button';
 
 const Contact: NextPage = () => {
 	return (
-		<section className='mt-8 flex-1 flex   gap-8 '>
-			<div className='flex-[3]'>
-				<div className='   '>
+		<section className='mt-8  flex-1 flex   gap-8 desktop-lg:w-3/6 w-4/6  justify-items-center  mx-auto '>
+			<div className='flex-[3] desktop-lg:flex-[2]'>
+				<div className='  '>
 					{' '}
-					<form action='' className='flex flex-col gap-4  w-5/6 desktop-lg:w-3/6'>
+					<form action='' className='flex flex-col gap-4    '>
 						<div className='flex flex-col'>
 							<label className='text-black' htmlFor='name'>
 								Name:

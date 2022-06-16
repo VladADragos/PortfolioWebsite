@@ -7,7 +7,7 @@ type Props = {
 
 const Layout: React.FC<Props> = ({ children }) => {
 	return (
-		<div className='px-36 bg-slate-50  min-h-screen font-poppins font-bold text-lg flex flex-col'>
+		<div className='px-36 bg-slate-50  min-h-screen font-poppins font-bold text-lg flex flex-col items-center'>
 			<Navbar />
 			{children}
 			<Footer />

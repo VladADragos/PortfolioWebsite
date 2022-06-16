@@ -16,8 +16,9 @@ const Routes = {
 	},
 	portfolio: {
 		index: '/portfolio',
-		detail: param => `/portfolio/item=${param}`
-	}
+		detail: param => `/portfolio?item=${param}`
+	},
+	blog: "https://blog.vladdragos.com/"
 };
 
 export default Routes;

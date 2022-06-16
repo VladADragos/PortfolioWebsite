@@ -1,16 +1,14 @@
 import type { NextPage } from 'next';
 import React from 'react';
-import Button from '../components/Button';
-import Layout from '../components/Layout';
 
-import catbook from '../images/catbook.png';
-import routiner from '../images/routiner.png';
-import { DiGithubBadge } from 'react-icons/di';
-import { HiOutlineLink } from 'react-icons/hi';
-import Navbar from '../components/Navbar';
 import Link from 'next/link';
+import type { StaticImageData } from 'next/image';
+
+import { DiGithubBadge } from 'react-icons/di';
+
 import Routes from '../Routes';
-import { StaticImageData } from 'next/image';
+import Button from '../components/Button';
+import PortfolioItems from '../assets/data/PortfolioItems';
 
 const Home: NextPage = () => {
 	return (
@@ -28,35 +26,20 @@ const Home: NextPage = () => {
 					<Button type='primary' link={Routes.portfolio.index}>
 						Portfolio
 					</Button>
-					<Button type='secondary' link={Routes.resume} redirect>
+					<Button type='secondary' link={Routes.contact}>
 						Contact
 					</Button>
 				</div>
 			</div>
 
-			<PortfolioOverview routiner={routiner} catbook={catbook} />
+			<PortfolioOverview />
 		</section>
 	);
 };
 
 export default Home;
 
-const PortfolioItems = [
-	{
-		name: 'Routiner',
-		demo: Routes.projects.routiner.demo,
-		github: Routes.projects.routiner.source,
-		image: routiner
-	},
-	{
-		name: 'Catbook',
-		demo: Routes.projects.catbook.demo,
-		github: Routes.projects.catbook.source,
-		image: catbook
-	}
-];
-
-function PortfolioOverview({ routiner, catbook }) {
+function PortfolioOverview() {
 	return (
 		<div>
 			<h3 className='mb-4'>Some projects</h3>
