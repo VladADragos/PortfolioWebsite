@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;900&family=Satisfy&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-effect-hover {
+	@apply relative after:absolute after:content-[''] after:w-full after:h-1 after:bg-black after:bottom-0 after:left-0 after:scale-x-0 after:origin-center hover:after:origin-right hover:after:scale-x-100 after:transition-transform after:ease-in after:duration-200;
+}
+.link-effect-selected {
+	@apply relative after:absolute after:content-[''] after:w-full after:h-1 after:bg-black after:bottom-0 after:left-0;
+}
+
+.button {
+	@apply text-white font-bold px-5 py-2 rounded-lg;
+}
+.button-hover-effect {
+	@apply hover:scale-110 transition-all  duration-500 ease-out;
+}
