@@ -11,6 +11,13 @@
     },
     {
       "type": "npm",
+      "script": "typecheck",
+      "problemMatcher": [],
+      "label": "typecheck",
+      "detail": "typecheck"
+    },
+    {
+      "type": "npm",
       "script": "clean",
       "problemMatcher": [],
       "label": "clean",
