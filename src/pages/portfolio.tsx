@@ -23,7 +23,7 @@ export default Portfolio;
 
 const PortfolioItemContainer = ({ children }) => {
 	return (
-		<div className='flex  scale-100 focus:scale-105 hover:scale-105 transition-transform ease-in-out duration-350 outline-0   gap-4'>
+		<div className='flex lg:flex-row flex-col scale-100 focus:scale-105 hover:scale-105 transition-transform ease-in-out duration-350 outline-0   gap-4'>
 			{children}
 		</div>
 	);
@@ -42,17 +42,10 @@ type PortfolioItemProps = PortfolioItemType & { reverse?: boolean };
 const PortfolioItem: React.FC<PortfolioItemProps> = props => {
 	return (
 		<PortfolioItemContainer>
-			{props.reverse ? (
-				<>
-					<PortfolioItemLeft {...props} />
-					<PortfolioItemImage image={props.image} />
-				</>
-			) : (
-				<>
+
 					<PortfolioItemImage image={props.image} />
 					<PortfolioItemLeft {...props} />
-				</>
-			)}
+
 		</PortfolioItemContainer>
 	);
 };

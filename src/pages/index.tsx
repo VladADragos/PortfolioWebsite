@@ -12,7 +12,7 @@ import PortfolioItems from '../assets/data/PortfolioItems';
 
 const Home: NextPage = () => {
 	return (
-		<section className='mt-32 flex flex-col gap-12'>
+		<section className='lg:mt-32 mt-8 flex flex-col gap-12'>
 			<div>
 				<div className=' '>
 					<h2 className='font-poppins font-medium text-2xl 2xl:text-3xl '>
@@ -43,7 +43,7 @@ function PortfolioOverview() {
 	return (
 		<div>
 			<h3 className='mb-4'>Some projects</h3>
-			<div className='grid grid-cols-3 gap-12 xl:w-4/5'>
+			<div className='grid lg:grid-cols-3 grid-cols-1 gap-12 xl:w-4/5'>
 				{PortfolioItems.map((props, index) => (
 					<PortfolioItem {...props} key={index} />
 				))}

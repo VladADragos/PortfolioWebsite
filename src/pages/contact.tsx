@@ -3,8 +3,8 @@ import Button from '../components/Button';
 
 const Contact: NextPage = () => {
 	return (
-		<section className='mt-8  flex-1 flex   gap-8 desktop-lg:w-3/6 w-4/6  justify-items-center  mx-auto '>
-			<div className='flex-[3] desktop-lg:flex-[2]'>
+		<section className='mt-8  flex-1 flex     gap-8 desktop-lg:w-3/6 lg:w-4/6 mb-8 lg:mb-0  justify-items-center  mx-auto flex-col lg:flex-row'>
+			<div className='flex-[3] desktop-lg:flex-[2] '>
 				<div className='  '>
 					{' '}
 					<form action='' className='flex flex-col gap-4    '>
@@ -43,7 +43,7 @@ const Contact: NextPage = () => {
 					</form>{' '}
 				</div>{' '}
 			</div>
-			<div className='bg-[#b6c9d9] p-8 flex-1    flex flex-col gap-4'>
+			<div className='bg-[#b6c9d9] p-8 flex-1    flex flex-col gap-4 '>
 				<div className=''>
 					<h3 className='text-sm font-normal'>Phone number</h3>
 					<a href='tel:0705172459' className='text-white'>

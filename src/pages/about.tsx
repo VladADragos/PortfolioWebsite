@@ -3,10 +3,10 @@ import profilePicture from '../assets/images/IMG_20220615_153521.png';
 import AboutText from '../assets/data/About';
 const About: NextPage = () => {
 	return (
-		<div className='flex flex-col  w-3/5'>
-			<div className='flex'>
-				<div className='flex-1 flex flex-row justify-end '>
-					<div className='flex-1'>
+		<div className='flex flex-col  lg:w-3/5'>
+			<div className='flex flex-col lg:flex-row'>
+				<div className='flex-1 flex flex-row  justify-end '>
+					<div className='flex-1 '>
 						<svg
 							viewBox='0 0 120 120'
 							xmlns='http://www.w3.org/2000/svg'
@@ -37,7 +37,7 @@ const About: NextPage = () => {
 						</svg>
 					</div>
 				</div>
-				<div className='flex-1 pt-8'>
+				<div className='flex-1 lg:pt-8'>
 					<h2 className='text-4xl'>{AboutText.part1.heading}</h2>
 					<div className='flex flex-col gap-4'>
 						{AboutText.part1.body.map((par, index) => (
@@ -48,7 +48,7 @@ const About: NextPage = () => {
 					</div>
 				</div>
 			</div>
-			<div className=' '>
+			<div className='lg:mt-0 mt-8'>
 				<h2 className='text-4xl'>{AboutText.part2.heading}</h2>
 				<div className='flex flex-col gap-4'>
 					{AboutText.part2.body.map((par, index) => (
