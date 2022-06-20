@@ -8,6 +8,8 @@ import type { PortfolioItemType } from '../assets/data/PortfolioItems';
 import clsx from 'clsx';
 import type { StaticImageData } from 'next/image';
 import Button from '../components/Button';
+import { IconType } from 'react-icons';
+import { PortfolioItemType } from '../assets/data/PortfolioItems';
 
 const Portfolio: NextPage = () => {
 	return (
@@ -50,14 +52,22 @@ const PortfolioItem: React.FC<PortfolioItemProps> = props => {
 	);
 };
 
-function PortfolioItemUsing({}) {
+
+type PortfolioItemUsingPorps  = Pick<PortfolioItemType,"using">
+
+const PortfolioItemUsing: React.FC<PortfolioItemUsingPorps> = ({using})=> {
+
+	
+	
 	return (
-		<span className='flex items-center mt-4  text-xl'>
-			<h3 className='font-bold text-black'>using:</h3>
-			<DiMysql className=' text-4xl' />
-			<DiPhp className=' text-4xl' />
-			<DiJsBadge className=' text-4xl' />
-			<DiCss3Full className=' text-4xl' />
+		<span className='flex items-center mt-4  '>
+			<h3 className='font-bold text-ms  text-slate-900'>using:</h3>
+			{
+				using.map((item,index)=>{
+					return <item.icon key={index} className="text-4xl " title={item.name} /> 
+				})
+			}
+			
 		</span>
 	);
 }
@@ -85,24 +95,26 @@ const PortfolioItemLinks: React.FC<PortfolioItemLinksProps> = ({ demo, source })
 	);
 };
 
-function PortfolioItemDescription({ description }) {
-	return <p className='font-normal mt-4 text-sm desktop-lg:text-lg'>{description}</p>;
-}
+
 
 type PortfolioItemLeftProps = Omit<PortfolioItemProps, 'image'>;
 const PortfolioItemLeft: React.FC<PortfolioItemLeftProps> = ({
 	reverse,
 	name,
+	demoCredentials,
 	description,
+	using,
 	demo,
 	github
 }) => {
 	return (
 		<div className='flex-1  flex items-center '>
-			<div className={clsx(' p-4    text-black h-full ')}>
-				<h2 className={clsx('text-5xl text-black font-bold ')}>{name}</h2>
-				<PortfolioItemUsing />
-				<PortfolioItemDescription description={description} />
+			<div className={clsx(' p-4     h-full ')}>
+				<h2 className={clsx('text-5xl text-slate-800  font-bold ')}>{name}</h2>
+				<PortfolioItemUsing  using={using}/>
+				<h3 className='mt-4 text-sm'>Demo login</h3>
+				<p className='   text-sm desktop-lg:text-lg font-semibold'> <span className='text-md font-thin'>username:</span>  {demoCredentials.username} <span className='text-md font-thin'>password:</span>  {demoCredentials.password}</p>
+				<p className='font-normal mt-4 text-sm desktop-lg:text-lg'>{description}</p>
 				<PortfolioItemLinks demo={demo} source={github} />
 			</div>
 		</div>
