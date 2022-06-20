@@ -7,6 +7,7 @@ type PropsButton = {
 	noEffect?: boolean;
 	link?: string;
 	redirect?: boolean;
+	disabled?: boolean;
 };
 
 type PropsContainer = {
@@ -14,7 +15,6 @@ type PropsContainer = {
 	redirect?: boolean;
 };
 const Container: React.FC<PropsContainer> = ({ children, link, redirect }) => {
-	console.log(redirect);
 	redirect = redirect ? true : false;
 
 	if (!link && !redirect) return <>{children}</>;
@@ -32,12 +32,14 @@ const Container: React.FC<PropsContainer> = ({ children, link, redirect }) => {
 	);
 };
 
-const Button: React.FC<PropsButton> = ({ children, type, link, redirect, noEffect }) => {
+const Button: React.FC<PropsButton> = ({ children, type, link, redirect, noEffect, disabled=false }) => {
 	return (
 		<Container link={link} redirect={redirect}>
 			<button
+			disabled={disabled}
 				className={clsx(
 					{
+						'opacity-25 cursor-not-allowed': disabled,
 						'button-hover-effect': !noEffect,
 						'bg-brand-orange-medium hover:bg-brand-orange-light': type === 'primary',
 						'bg-brand-blue-medium hover:bg-brand-blue-light': type === 'secondary',

@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 
 import logo from '../assets/images/Intersect.svg';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import { HiOfficeBuilding, HiOutlineAnnotation, HiOutlineBriefcase, HiUser } from 'react-icons/hi';
 import { DiGithubBadge } from 'react-icons/di';
 import Routes from '../Routes';
@@ -55,17 +55,30 @@ const NavLinks: NavLink[] = [
 	{ name: 'Blog', path: Routes.blog, redirect: true, icon: <IoPencilOutline /> }
 ];
 
+
+
 export default function MobileMenu() {
   return (
     <div className="   text-right w-full flex justify-between mt-4 relative z-1">
         	<header className='hover:scale-105 transition-all ease-in-out duration-400  '>
-				<Link href={Routes.home}>
+				<NextLink href={Routes.home}>
 					<a>
 						<img src={logo.src} alt='logo'></img>
 					</a>
-				</Link>
+				</NextLink>
 			</header>
-      <Menu as="div" className=" inline-block text-left ">
+            <div className="lg:flex gap-4 hidden">
+            {NavLinks.map(({name,path,redirect,icon},index)=>{
+                  return  (<NextLink href={path} key={index}   ><a 
+                        className="text-brand-blue-dark 2 text-md flex items-center"
+                       
+                      >
+    
+                        {name} <span className="ml-1">{icon}</span> 
+                      </a></NextLink> 
+             ) })}
+            </div>
+      <Menu as="div" className=" inline-block text-left lg:hidden">
           <Menu.Button className=" justify-center  text-black font-medium   focus:outline-none  ">
             <IoReorderThree className='h-12 w-12'></IoReorderThree>
           </Menu.Button>
@@ -78,18 +91,21 @@ export default function MobileMenu() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0  w-full  origin-top-right   rounded-md bg-brand-blue-dark shadow-lg  z-10">
+          <Menu.Items className="absolute right-0  w-full  origin-top-right   rounded-md bg-brand-blue-dark shadow-lg  z-10 ">
               {NavLinks.map(({name,path,redirect,icon},index)=>{
                   return (<div className="px-1 py-1" key={index}>
                   <Menu.Item >
                     {({ active }) => (
+                        <NextLink href={path}>
+
                       <a
-                        className="text-white font-bold  flex w-full items-center rounded-md px-2 py-2 text-sm"
-                        href={path}
-                      >
+                        className="text-white font-bold  flex w-full items-center   px-2 py-2 text-md "
+                       
+                        >
     
-                        {name}
+                        {name} <span className="ml-1">{icon}</span> 
                       </a>
+                          </NextLink>
                     )}
                   </Menu.Item>
     
